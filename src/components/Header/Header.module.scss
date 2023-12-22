@@ -1,0 +1,187 @@
+$mainBackgroundColor: #1d1d1d;
+// $mainBackgroundColor: #c42828;
+$lightmainBackgroundColor: #383838;
+// $lightmainBackgroundColor: #d31e1e;
+$mainColor: #f5eddc;
+
+//============ кольор активного меню при звичайному екрані
+@mixin rainbowText {
+  color: rgba(0, 255, 255, 0);
+  background-clip: text;
+  transition: color 1s ease;
+
+  background: -webkit-linear-gradient(90deg, #b963c2, #638adb, #339dc5);
+  background: linear-gradient(90deg, #b963c2, #638adb, #339dc5);
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+//============ кольор активного менб при бургер меню
+@mixin rainbowTextBurger {
+  color: #f5eddc;
+  background-clip: text;
+  transition: color 1s ease;
+  background: -webkit-linear-gradient(90deg, #b963c2, #638adb, #339dc5);
+  background: linear-gradient(90deg, #b963c2, #638adb, #339dc5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 6;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  border-bottom: 0.5px solid #ffffff0e;
+  &__background_none {
+    display: none;
+  }
+  &__logo {
+    padding: 5px;
+    color: $mainColor;
+
+    font-family: "Oswald", sans-serif;
+    font-size: 15px;
+    text-decoration: none;
+  }
+  &__language {
+    background-color: $mainBackgroundColor;
+    // background-color: transparent;
+  }
+  &__select {
+    background-color: $lightmainBackgroundColor;
+    color: $mainColor;
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+
+    option {
+      background-color: $lightmainBackgroundColor;
+      color: #dadada88;
+      padding: 5px;
+
+      &:hover {
+        background-color: #fff;
+      }
+    }
+  }
+}
+.toggle {
+  display: none;
+  color: #fff;
+  // background-color: #1d1d1d;
+  // background-color: transparent !important;
+
+}
+.nav {
+  &__container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: transparent;
+  }
+  &__ul {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    z-index: 5;
+  }
+  &__li {
+    text-decoration: none;
+    color: $mainColor;
+    transition: color 1s ease;
+
+    &_active {
+      @include rainbowText();
+    }
+    &:hover {
+      @include rainbowText();
+    }
+  }
+}
+
+@media (max-width: 1025px) {
+  .header {
+    transition: all 0.5s ease;
+    &__background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      background: #69636350;
+      // background: #69131350;
+      backdrop-filter: blur(3px);
+    }
+    .toggle {
+        // background-color: #1d1d1d;
+
+      display: block;
+      color: #fff;
+  // background-color: #ce1e1e ;
+
+      z-index: 5;
+    }
+
+    .nav {
+      z-index: 5;
+      &__li {
+        color: $mainColor;
+
+        &_active {
+          color: #339dc5;
+        }
+      }
+      &__ul {
+        flex-direction: column;
+        position: absolute;
+        top: 0%;
+        right: -600%;
+        width: 100vw;
+        height: 100vh;
+        opacity: 0;
+        transition: all 0.5s ease;
+        padding: 150px 30px;
+
+        li {
+          padding: 20px 40px;
+          
+        }
+      }
+      &__ul_active {
+
+        right: -20vw;
+        top: -10px;
+
+        border-left: 1px solid #ffffff34;
+        border-right: 1px solid #ffffff34;
+        opacity: 1;
+        // background-color: #1d1d1d;
+        // background-color: #a11b1b;
+        transition: all 0.5s ease;
+
+
+        li {
+          font-size: 1rem;
+        // background-color: #1d1d1d;
+
+          padding: 20px 40px;
+          @media (max-width: 350px){
+            font-size: 12px;
+          padding: 10px 10px;
+
+          }
+        }
+      }
+    }
+  }
+}

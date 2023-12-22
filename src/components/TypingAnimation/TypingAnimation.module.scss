@@ -1,0 +1,38 @@
+// TypingAnimation.module.scss
+
+.typing-animation {
+  animation-name: typing-animation;
+  animation-duration: 1s;
+  
+}
+
+@keyframes typing-animation {
+  0% {
+    animation-delay: 250ms;
+  }
+
+  100% {
+    animation-delay: 0ms;
+  }
+}
+
+.green{
+  color: #00ff00;
+  background-color: #000000;
+
+
+}
+.dark{
+  color: #000000;
+  // color: #141414;
+  background-color: #000000;
+
+
+}
+.typing_container{
+  span{
+
+    font-family: 'Roboto', serif;
+  }
+
+}

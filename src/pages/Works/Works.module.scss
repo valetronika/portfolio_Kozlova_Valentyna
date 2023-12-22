@@ -1,0 +1,18 @@
+.works {
+  padding: 150px 0;
+  // display: flex;
+  // flex-direction: column;
+  @media(max-width:850px){
+  padding: 100px 0;
+
+  }
+}
+
+// .mobile {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   // margin-bottom: 20px;
+//   gap: 20px;
+// }

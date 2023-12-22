@@ -1,0 +1,81 @@
+$mainBackgroundColor: #021319;
+$mainColor: #f5eddc;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    background-color: $mainBackgroundColor;
+}
+
+.general__page{
+
+}
+
+.page_container {
+    margin: 0 auto;
+    // padding: 20px;
+    // width: 100vw;
+    // height: 100vh;
+    background-color: $mainBackgroundColor;
+    // overflow: hidden;
+
+
+
+}
+.main__block {
+    display: flex;
+    // grid-template-columns: 15% 85%;/
+}
+
+
+//= changed block
+.content{
+    padding:0 20px 0 180px;
+    flex-grow: 1;
+    // overflow-y: auto;
+    height: 100vh;
+    width: 93vw;
+    // height: 100%;
+    &::-webkit-scrollbar {
+        width: 8px; 
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: $mainBackgroundColor; /* цвет ползунка */
+    }
+}
+
+@media (max-width: 865px) {
+    .content{
+        padding:0 50px 0 150px;
+    
+        }
+   
+}
+@media (max-width: 690px) {
+    .content{
+        padding:0 50px 0 130px;
+    
+        }
+   
+}
+@media (max-width: 510px) {
+    .content{
+        padding:0 0px 0 00px;
+    
+        }
+   
+}
+// @media (max-width: 540px) {
+//     .page_container {
+//         // padding: 0 20px 0 40px;
+//     }
+// }
+// @media (max-width: 450px) {
+//     .page_container {
+//         // padding: 0 10px 0 30px;
+//     }
+// }

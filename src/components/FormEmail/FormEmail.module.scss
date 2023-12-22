@@ -1,0 +1,16 @@
+.form {
+  display: flex;
+  flex-direction: column;
+
+  width: 300px;
+  & > div {
+    display: flex;
+    flex-direction: column;
+  }
+  &__subject {
+  }
+  &__message {
+  }
+  &__submit {
+  }
+}

@@ -1,0 +1,91 @@
+$backgroundPip: #000000;
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.about__pip {
+  & > *,
+  &_img ,
+  &__pip_blink ,
+  th ,
+  &_info,
+  p {
+    background-color: $backgroundPip;
+  }
+
+  min-width: 600px;
+  width: 50%;
+
+  padding: 30px;
+  background-color: $backgroundPip;
+  color: #00ff00;
+
+  border-radius: 10px;
+
+  &_down {
+    display: flex;
+    justify-content: space-between;
+  }
+  &_img {
+    // background-color: #000000;
+
+    width: 50px;
+    object-fit: contain;
+  }
+  &_table {
+    width: 100%;
+    // border-collapse: inherit;
+    padding: 0px 0 30px 0;
+
+    text-transform: uppercase;
+    font-weight: 900;
+    // font-family: Roboto,serif;
+    .column_active {
+      border-left: 1px solid #00ff00;
+      border-right: 1px solid #00ff00;
+      // background-color: #000000;
+    }
+    .column_inactive {
+      border-bottom: 1px solid #00ff00;
+    }
+    th {
+      // background-color: $backgroundPip;
+
+      font-family: "Roboto", serif;
+    }
+  }
+  &_info {
+    display: flex;
+    flex-direction: column;
+    // gap: 20px;
+    // background-color: #000000;
+
+    font-size: 20px;
+  }
+
+  p {
+    // background-color: #000000;
+
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+  }
+
+  &_blink {
+    background-color: #00ff0079;
+    width: 3px;
+    min-height: 20px;
+    // height: 100%;
+    margin: 0 5px 0 5px;
+    display: inline-block;
+    animation: blink 1s infinite;
+  }
+}
