@@ -38,9 +38,14 @@ export default function Home() {
     window.scrollTo(0, 0);
   }, []);
   const openCloseCertificate = (imageKey) => {
+    // setIsBig((prevState) => ({
+    //   ...prevState,
+    //   [imageKey]: !prevState[imageKey],
+    // }));
     setIsBig((prevState) => ({
-      ...prevState,
-      [imageKey]: !prevState[imageKey],
+      certifikate: imageKey === "certifikate" ? !prevState.certifikate : false,
+      empfehlung1: imageKey === "empfehlung1" ? !prevState.empfehlung1 : false,
+      empfehlung2: imageKey === "empfehlung2" ? !prevState.empfehlung2 : false,
     }));
   };
 
@@ -81,7 +86,7 @@ export default function Home() {
         />
       </div>
 
-      {/* === ABOUT ME TIEL */}
+      {/* === ABOUT ME TEIL */}
       <div className={s.home_aboutme}>
         <div>
           <p>

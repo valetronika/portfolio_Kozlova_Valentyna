@@ -7,7 +7,7 @@ export default function ModalMessage({ text, onClose }) {
   return (
     <div className={s.modal}>
       <div className={s.modalContent}>
-        <span className={s.close} onClick={onClose}>&times;</span>
+        {/* <span className={s.close} onClick={onClose}>&times;</span> */}
         <p>{text}</p>
       </div>
     </div>
