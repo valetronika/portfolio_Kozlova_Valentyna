@@ -18,7 +18,7 @@ export default function Home() {
   const data = personal_data[lang];
 
   const greetingArrMess = data?.greeting;
-  const about = personal_data[lang].aboutMe;
+  const about = personal_data[lang]?.aboutMe;
   const skills = personal_data[lang].skills.join(", ");
 
   // == СЕРТИФІКАТИ
