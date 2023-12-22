@@ -1,5 +1,5 @@
 
-vercel: https://valetronika.github.io
+vercel: https://portfolio-vercel-mu.vercel.app/
 
 
 
