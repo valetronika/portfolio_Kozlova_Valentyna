@@ -4,7 +4,6 @@ import { useTranslation } from "react-i18next";
 import { useNavigate, useParams } from "react-router-dom";
 import { projects_data } from "../../data/projects_data";
 import Circles from "../../components/animations/Circles/Circles";
-import StepBack from "../../components/StepBack/StepBack";
 
 export default function ProjectPage() {
   const { id } = useParams();

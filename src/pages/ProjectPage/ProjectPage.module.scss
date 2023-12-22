@@ -24,21 +24,22 @@ $backgroundHell: #ffe4c4d7;
   color: $main_text_color;
   background-color: $mainBackgroundColor;
 
-&__step_back{
-  color: #ffe4c473;
-  max-width: 150px;
-  border: none;
-  padding: 15px;
-  font-size: 20px;
-  transition: all 0.5s ease;
-  &:hover {
-    font-size: 25px;
-  padding: 12px;
+  &__step_back {
+    display: flex;
+    justify-content: start;
+    color: #ffe4c473;
+    max-width: 150px;
+    border: none;
+    padding: 15px 15px 15px 0;
+    font-size: 20px;
+    transition: all 0.5s ease;
+    &:hover {
+      font-size: 25px;
+      padding: 12px 12px 12px 0;
 
-  color: $main_text_color;
-    
+      color: $main_text_color;
+    }
   }
-}
   &__background_hell,
   h3,
   li,
@@ -93,7 +94,6 @@ $backgroundHell: #ffe4c4d7;
       width: 50px;
     }
     &_img_jumping {
-      // width: 50px;
       position: relative;
       animation-name: moveGoat;
       animation-duration: 1s;
@@ -199,7 +199,6 @@ $backgroundHell: #ffe4c4d7;
   }
   @media (max-width: 690px) {
     &__text {
-      // line-height: 1.5;
       font-size: 1rem;
     }
     &__problem,
@@ -245,7 +244,6 @@ $backgroundHell: #ffe4c4d7;
 }
 @media (max-width: 1170px) {
   .project {
-    //
     &__links {
       &_cont {
         width: 200px;
@@ -260,6 +258,9 @@ $backgroundHell: #ffe4c4d7;
     &__head {
       font-size: 1em;
       font-weight: 300;
+    }
+    &__step_back {
+      display: none;
     }
     //
 
@@ -279,8 +280,6 @@ $backgroundHell: #ffe4c4d7;
       flex-wrap: wrap;
       justify-content: center;
 
-      &_title {
-      }
       &_cont {
         width: 250px;
       }
@@ -289,12 +288,9 @@ $backgroundHell: #ffe4c4d7;
 }
 @media (max-width: 690px) {
   .project {
-    // padding: 50px 20px 900px;
-
     //======= name of project
     //======= __title_static when is_jumping_image: false,
-    &__title_static {
-    }
+
     &__title {
       text-align: end;
       &_text {
@@ -302,10 +298,6 @@ $backgroundHell: #ffe4c4d7;
       }
       &_container {
         left: 320px;
-        // top: -35px;
-      }
-
-      &_img_jumping {
       }
     }
 
@@ -319,8 +311,6 @@ $backgroundHell: #ffe4c4d7;
       flex-wrap: wrap;
       justify-content: center;
 
-      &_title {
-      }
       &_cont {
         width: 250px;
       }
@@ -329,10 +319,7 @@ $backgroundHell: #ffe4c4d7;
 }
 @media (max-width: 630px) {
   .project {
-    // padding: 50px 20px 900px;
-    // padding: 0 0 200px 0;
-
-    //
+    gap: 18px;
 
     //======= name of project
     //======= __title_static when is_jumping_image: false,
@@ -349,12 +336,8 @@ $backgroundHell: #ffe4c4d7;
 }
 @media (max-width: 430px) {
   .project {
-    // padding: 50px 20px 900px;
-
-    //
     &__description {
       &_comment {
-        // font-style: italic;
         font-size: 14px;
       }
     }
@@ -363,8 +346,6 @@ $backgroundHell: #ffe4c4d7;
     &__title_static {
     }
     &__title {
-      // position: relative;
-      // text-align: end;
       &_text {
         padding: 20px 0 0;
         font-size: 20px;
@@ -386,7 +367,6 @@ $backgroundHell: #ffe4c4d7;
 
     &__specification {
       font-size: 12px;
-      // padding: 15px 25px;
     }
   }
 }
