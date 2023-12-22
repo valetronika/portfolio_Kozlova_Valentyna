@@ -19,14 +19,14 @@ export default function Home() {
 
   const greetingArrMess = data?.greeting;
   const about = personal_data[lang]?.aboutMe;
-  const skills = personal_data[lang].skills.join(", ");
+  const skills = personal_data[lang]?.skills.join(", ");
 
   // == СЕРТИФІКАТИ
-  const dtz_1 = certificates[lang].dtz_zertif1;
-  const dtz_2 = certificates[lang].dtz_zertif2;
-  const empfehlung1 = certificates[lang].Empfehlungsschreiben1;
-  const empfehlung2 = certificates[lang].Empfehlungsschreiben2;
-  const certifikate = certificates[lang].certificate_img_entw;
+  const dtz_1 = certificates[lang]?.dtz_zertif1;
+  const dtz_2 = certificates[lang]?.dtz_zertif2;
+  const empfehlung1 = certificates[lang]?.Empfehlungsschreiben1;
+  const empfehlung2 = certificates[lang]?.Empfehlungsschreiben2;
+  const certifikate = certificates[lang]?.certificate_img_entw;
 
   const [isBig, setIsBig] = useState({
     certifikate: false,
