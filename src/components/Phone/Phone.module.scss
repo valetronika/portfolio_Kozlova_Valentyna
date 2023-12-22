@@ -1,0 +1,16 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  & > * {
+    text-decoration: none;
+  }
+  &__phone {
+    color: antiquewhite;
+    // font-style: italic;
+  }
+  &__whatsapp {
+    color: #25D366;
+
+  }
+}
