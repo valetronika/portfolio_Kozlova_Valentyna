@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { personal_data, contacts_data } from "../../data/data";
 import CopyToClipboard from "react-copy-to-clipboard";
 import ModalMessage from "../../components/ModalMessage/ModalMessage";
+import Phone from "../../components/Phone/Phone";
 // import FormEmail from "../../components/FormEmail/FormEmail";
 
 export default function Contacts() {
@@ -29,25 +30,24 @@ export default function Contacts() {
 
   return (
     <div className={s.contacts}>
-
-        <p className={s.contacts__email}>
-          {general.contacts.write_me_massage}
-          <a title="Click to send E-mail" href={`mailto:${email}`}>
-            {email}
-          </a>
-        </p>
+      <p className={s.contacts__email}>
+        {general.contacts.write_me_massage}
+        <a title="Click to send E-mail" href={`mailto:${email}`}>
+          {email}
+        </a>
+      </p>
 
       <CopyToClipboard text={telegram} onCopy={handleCopySuccess}>
-        <p title="Click to copy to clipboard" style={{ cursor: "pointer" }}>
-          Telegram: {telegram}
-        </p>
+        {/* <div> */}
+          <div title="Click to copy to clipboard" style={{ cursor: "pointer" }}  className={s.contacts__telegram}>
+            <span style={{ color: "#0088CC" }}>Telegram:</span>{!isCopied ? telegram:<p  className={s.contacts__telegram_cop} onClose={() => setIsCopied(false)}> Copied !</p>}
+          </div>
+            {/* {isCopied && (
+              <ModalMessage text="Copied !" onClose={() => setIsCopied(false)} />
+            )} */}
+        {/* </div> */}
       </CopyToClipboard>
-      {isCopied && (
-        <ModalMessage
-          text="Text copied to clipboard!"
-          onClose={() => setIsCopied(false)}
-        />
-      )}
+      <Phone />
     </div>
   );
 }

@@ -26,6 +26,14 @@ export const general_info = {
     ],
     email: "valetronika@gmail.com",
     subject:"letter from portfolio",
+    phone:{
+        phone_de_text:'',
+        phone_de:"01781981537",
+        phone_ua_text:"whatsapp",
+        phone_ua:"+380964819334"
+
+    },
+
 
 
 }

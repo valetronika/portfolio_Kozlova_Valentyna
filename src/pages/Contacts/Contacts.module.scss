@@ -1,7 +1,6 @@
 .contacts {
   color: #f5eddc;
   font-weight: 700;
-  // text-transform: uppercase;
   line-height: 2;
   padding: 150px 50px;
 
@@ -9,6 +8,14 @@
   flex-direction: column;
   gap: 20px;
 
+  &__telegram{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    &_cop{
+      color: rgba(255, 255, 255, 0.397);
+    }
+  }
   &__email {
     display: flex;
     gap: 15px;
@@ -30,7 +37,6 @@
 
   }
   @media (max-width: 340px){
-    // padding:90px 20px;
   font-size: 12px;
     }
 }
