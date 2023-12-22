@@ -24,7 +24,21 @@ $backgroundHell: #ffe4c4d7;
   color: $main_text_color;
   background-color: $mainBackgroundColor;
 
+&__step_back{
+  color: #ffe4c473;
+  max-width: 150px;
+  border: none;
+  padding: 15px;
+  font-size: 20px;
+  transition: all 0.5s ease;
+  &:hover {
+    font-size: 25px;
+  padding: 12px;
 
+  color: $main_text_color;
+    
+  }
+}
   &__background_hell,
   h3,
   li,

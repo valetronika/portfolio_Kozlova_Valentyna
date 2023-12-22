@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import s from "./ProjectPage.module.scss";
 import { useTranslation } from "react-i18next";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { projects_data } from "../../data/projects_data";
 import Circles from "../../components/animations/Circles/Circles";
+import StepBack from "../../components/StepBack/StepBack";
 
 export default function ProjectPage() {
   const { id } = useParams();
@@ -33,10 +34,17 @@ export default function ProjectPage() {
       };
     }
   }, [isJumping]);
+// шаг назад
+const navigate = useNavigate();
+  const handleBackClick = () => {
+    navigate(-1);
+  };
   return (
     <div className={s.project}>
+      <button onClick={handleBackClick} className={s.project__step_back}>{` << back`}</button>
       <div className={s.project__head}>
         <h2 className={s.project__head}>Web Development</h2>
+        
         <Circles />
       </div>
       <div
