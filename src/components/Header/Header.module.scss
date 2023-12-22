@@ -76,9 +76,6 @@ $mainColor: #f5eddc;
 .toggle {
   display: none;
   color: #fff;
-  // background-color: #1d1d1d;
-  // background-color: transparent !important;
-
 }
 .nav {
   &__container {
@@ -93,6 +90,9 @@ $mainColor: #f5eddc;
     gap: 20px;
     list-style: none;
     z-index: 5;
+    @media (max-height: 440px) {
+      gap: 10px;
+    }
   }
   &__li {
     text-decoration: none;
@@ -123,11 +123,8 @@ $mainColor: #f5eddc;
       backdrop-filter: blur(3px);
     }
     .toggle {
-        // background-color: #1d1d1d;
-
       display: block;
       color: #fff;
-  // background-color: #ce1e1e ;
 
       z-index: 5;
     }
@@ -151,34 +148,33 @@ $mainColor: #f5eddc;
         opacity: 0;
         transition: all 0.5s ease;
         padding: 150px 30px;
-
+        @media (max-height: 440px) {
+          gap: 10px;
+          padding: 90px 30px;
+          li > a {
+            font-size: 16px;
+          }
+        }
         li {
           padding: 20px 40px;
-          
         }
       }
       &__ul_active {
-
         right: -20vw;
         top: -10px;
 
         border-left: 1px solid #ffffff34;
         border-right: 1px solid #ffffff34;
         opacity: 1;
-        // background-color: #1d1d1d;
-        // background-color: #a11b1b;
         transition: all 0.5s ease;
-
 
         li {
           font-size: 1rem;
-        // background-color: #1d1d1d;
 
           padding: 20px 40px;
-          @media (max-width: 350px){
+          @media (max-width: 350px) {
             font-size: 12px;
-          padding: 10px 10px;
-
+            padding: 10px 10px;
           }
         }
       }
