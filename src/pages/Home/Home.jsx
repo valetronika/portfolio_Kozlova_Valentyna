@@ -19,7 +19,7 @@ export default function Home() {
   // const lang =
   // i18n.language == "ru" ? "en" : i18n.language;
   const lang =
-  i18n.language == "en" || i18n.language == "ukr" || i18n.language == "de "?  i18n.language: "en" ;
+   i18n.language == "ukr" || i18n.language == "de" || i18n.language == "en" ?  i18n.language: "en" ;
   const data = personal_data[lang];
 
   // при переході на сторінку перезляд з початку:
