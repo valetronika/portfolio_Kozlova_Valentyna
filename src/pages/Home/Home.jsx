@@ -15,14 +15,12 @@ export default function Home() {
   const { t, i18n } = useTranslation();
   const [language, setLanguage] = useLocalStorage("language", "en");
   // const lang = i18n.language;
-  console.log("i18n.language", i18n.language);
+  console.log('i18n.language',i18n.language,typeof i18n.language)
+  // const lang =
+  // i18n.language == "ru" ? "en" : i18n.language;
   const lang =
-    i18n.language != "ukr" || i18n.language != "de" ? "en" : i18n.language;
+  i18n.language == "en" || i18n.language == "ukr" || i18n.language == "de "?  i18n.language: "en" ;
   const data = personal_data[lang];
-  console.log("data", data);
-  console.log("lang", lang);
-
-  console.log("personal_data", personal_data);
 
   // при переході на сторінку перезляд з початку:
   useEffect(() => {
@@ -60,13 +58,11 @@ export default function Home() {
     }));
   };
   if (!data) {
-    // Обработка отсутствия данных для выбранного языка
-    console.error(`Данные для языка ${lang} отсутствуют.`);
-    return <div>Данные отсутствуют</div>;
+    // Обробка відсутності даних для выбраної мови
+    console.error(`Дані мови ${lang} відсутні.`);
+    return <div>Даніе відсутні</div>;
   }
-  // if(lang == 'ru' ){
-  //   return <div>dovnload...</div>
-  // }
+
 
   return (
     <div className={s.container}>

@@ -18,8 +18,8 @@ export default function Header() {
   const { t, i18n } = useTranslation();
   // const lang = i18n.language;
   const lang =
-    i18n.language != "ukr" || i18n.language != "de" ? "en" : i18n.language;
-
+    i18n.language == "ru" ? "en" : i18n.language;
+    console.log(' header',lang)
   const data = personal_data[lang];
   const [language, setLanguage] = useLocalStorage("language", "en");
   const handlerLanguageChange = (selectedLanguage) => {
