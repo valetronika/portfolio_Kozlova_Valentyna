@@ -15,7 +15,7 @@ import ProjectPage from "./pages/ProjectPage/ProjectPage";
 function App() {
     const { t } = useTranslation();
     const [language, setLanguage] = useLocalStorage("language", "en");
-
+    console.log('language',language)
     const handlerLanguageChange = (selectedLanguage) => {
         i18n.changeLanguage(selectedLanguage);
         setLanguage(selectedLanguage);

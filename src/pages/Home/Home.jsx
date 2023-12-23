@@ -7,54 +7,66 @@ import { certificates } from "../../data/certificates_data";
 import main_photo from "../../images/ich.jpg";
 import Button from "../../components/Button/Button";
 import download_img from "../../images/arrow-circle-down.svg";
+import useLocalStorage from "../../hooks/use-localstorage";
 export default function Home() {
-    // //== при переході на сторінку перезляд з початку:
-  // useEffect(() => {
-  //   window.scrollTo(0, 0);
-  // }, []);
   //= для перекладача
-  const { t, i18n } = useTranslation();
-  const lang = i18n.language;
-  const data = personal_data[lang];
 
-  const greetingArrMess = data?.greeting;
-  const about = personal_data[lang]?.aboutMe;
-  const skills = personal_data[lang]?.skills.join(", ");
+
+  const { t, i18n } = useTranslation();
+  const [language, setLanguage] = useLocalStorage("language", "en");
+  // const lang = i18n.language;
+  console.log("i18n.language", i18n.language);
+  const lang =
+    i18n.language != "ukr" || i18n.language != "de" ? "en" : i18n.language;
+  const data = personal_data[lang];
+  console.log("data", data);
+  console.log("lang", lang);
+
+  console.log("personal_data", personal_data);
+
+  // при переході на сторінку перезляд з початку:
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  //== full year
+  let currencyYear = new Date().getFullYear();
+  const myBirdthYear = parseInt(
+    personal_data[lang]?.birthDate?.match(/\d{4}/)[0]
+  );
+  const fullYear = currencyYear - myBirdthYear;
+
+  const greetingArrMess = data.greeting;
+  const about = personal_data[lang].aboutMe;
+  const skills = personal_data[lang].skills.join(", ");
 
   // == СЕРТИФІКАТИ
-  const dtz_1 = certificates[lang]?.dtz_zertif1;
-  const dtz_2 = certificates[lang]?.dtz_zertif2;
-  const empfehlung1 = certificates[lang]?.Empfehlungsschreiben1;
-  const empfehlung2 = certificates[lang]?.Empfehlungsschreiben2;
-  const certifikate = certificates[lang]?.certificate_img_entw;
+  const dtz_1 = certificates[lang].dtz_zertif1;
+  const dtz_2 = certificates[lang].dtz_zertif2;
+  const empfehlung1 = certificates[lang].Empfehlungsschreiben1;
+  const empfehlung2 = certificates[lang].Empfehlungsschreiben2;
+  const certifikate = certificates[lang].certificate_img_entw;
 
   const [isBig, setIsBig] = useState({
     certifikate: false,
     empfehlung1: false,
     empfehlung2: false,
   });
-  // при переході на сторінку перезляд з початку:
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   const openCloseCertificate = (imageKey) => {
-    // setIsBig((prevState) => ({
-    //   ...prevState,
-    //   [imageKey]: !prevState[imageKey],
-    // }));
     setIsBig((prevState) => ({
       certifikate: imageKey === "certifikate" ? !prevState.certifikate : false,
       empfehlung1: imageKey === "empfehlung1" ? !prevState.empfehlung1 : false,
       empfehlung2: imageKey === "empfehlung2" ? !prevState.empfehlung2 : false,
     }));
   };
-
-  //== full year
-  let currencyYear = new Date().getFullYear();
-  const myBirdthYear = parseInt(
-    personal_data[lang].birthDate.match(/\d{4}/)[0]
-  );
-  const fullYear = currencyYear - myBirdthYear;
+  if (!data) {
+    // Обработка отсутствия данных для выбранного языка
+    console.error(`Данные для языка ${lang} отсутствуют.`);
+    return <div>Данные отсутствуют</div>;
+  }
+  // if(lang == 'ru' ){
+  //   return <div>dovnload...</div>
+  // }
 
   return (
     <div className={s.container}>
@@ -67,7 +79,7 @@ export default function Home() {
               </h2>
             );
           })}
-          <h2 className={s.greeteng_message}>{data.position}</h2>
+          <h2 className={s.greeteng_message}>{data?.position}</h2>
         </div>
         <div
           className={s.home__main_photo}
@@ -76,31 +88,34 @@ export default function Home() {
       </div>
       {/* ==== CONTAINER BUTTON */}
       <div className={s.home__button}>
-        <Button
-          className={"download_cv"}
-          func={data.cv_link}
-          download={"Kozlova Valentyna CV"}
-          name={data.cv_text}
-          imgClassName="download_img"
-          imgSrc={download_img}
-        />
+        {data && (
+          <Button
+            className={"download_cv"}
+            func={data.cv_link}
+            download={"Kozlova Valentyna CV"}
+            name={data.cv_text}
+            imgClassName="download_img"
+            imgSrc={download_img}
+          />
+        )}
       </div>
 
       {/* === ABOUT ME TEIL */}
       <div className={s.home_aboutme}>
-        <div>
-          <p>
-            {" "}
-            {about[2]} <span>{fullYear}</span>
-            {about[3]}
-          </p>
-          <p>
-            {" "}
-            {about[4]}
-            <span>{skills}</span>
-          </p>
-        </div>
-        {/* <Pipboy /> */}
+        {about && (
+          <div>
+            <p>
+              {" "}
+              {about[2]} <span>{fullYear}</span>
+              {about[3]}
+            </p>
+            <p>
+              {" "}
+              {about[4]}
+              <span>{skills}</span>
+            </p>
+          </div>
+        )}
       </div>
 
       <img

@@ -19,7 +19,7 @@ export default function About() {
   useEffect(() => {
     navigate("/about"); 
     window.scrollTo(0, 0);
-    console.log(" window.scrollTo(0, 0);", window);
+    // console.log(" window.scrollTo(0, 0);", window);
   }, [navigate]);
   //== skills to string
   const skills = personal_data[lang].skills.join(", ");
