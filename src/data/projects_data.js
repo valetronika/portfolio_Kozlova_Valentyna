@@ -112,12 +112,21 @@ export const projects_data = {
         ],
         problems: [
           {
-            problem_title: "What were the challenges :",
+            problem_title: "~ What were the challenges :",
             problem:
               "The layout turned out to be quite uneven, varying distances between elements like 'nav' and images that should be in the grid, and so on",
             solution: "Selected average approximate sizes",
             solution_title: "How they were solved :",
           },
+          {
+            problem_title: "~ Backend Issue :",
+            problem:
+              "The backend for this project was locally hosted, which wasn't suitable for demonstration purposes.",
+            solution:
+              "Host the backend on an online hosting platform. However, this method has its drawbacks: products are not rendered immediately upon the first load, and you have to wait for them to appear.",
+            solution_title: "Issue Resolved :",
+          },
+
           // { problem_title: "What were the challenges", problem: "", solution: "" },
         ],
       },
@@ -153,7 +162,7 @@ export const projects_data = {
         // 	},
         // ]
       },
-			// description: [
+      // description: [
       //   { text: "This is an example project description 1", img: example },
       //   { text: "This is an example project description 2", img: example },
       // ],
@@ -189,7 +198,7 @@ export const projects_data = {
       },
       website_from_layout_img: example,
 
-			description: [
+      description: [
         { text: "This is an example project description 1", img: example },
         { text: "This is an example project description 2", img: example },
       ],
@@ -220,12 +229,21 @@ export const projects_data = {
         ],
         problems: [
           {
-            problem_title: "Welche Herausforderungen gab es :",
+            problem_title: "~ Welche Herausforderungen gab es :",
             problem:
               "Das Layout erwies sich als ziemlich ungleichmäßig, unterschiedliche Abstände zwischen Elementen wie 'nav' und Bildern, die im Raster sein sollten, und so weiter",
             solution_title: "Wie sie gelöst wurden :",
             solution: "Wählte durchschnittliche ungefähre Größen aus",
           },
+          {
+            problem_title: "~ Backend-Problem :",
+            problem:
+              "Der Backend für dieses Projekt war lokal gehostet und war für Demonstrationszwecke nicht geeignet.",
+            solution:
+              "Hosten Sie das Backend auf einer Online-Plattform. Allerdings hat diese Methode ihre Nachteile: Produkte werden nicht sofort beim ersten Laden gerendert, man muss warten, bis sie erscheinen.",
+            solution_title: "Problem gelöst :",
+          },
+
           // { problem_title: "", problem: "", solution: "",solution_title: '' },
         ],
         descrition: [],
@@ -259,7 +277,7 @@ export const projects_data = {
         // ]
       },
 
-			// description: [
+      // description: [
       //   { text: "Dies ist ein Beispielprojektbeschreibung 1", img: example },
       //   { text: "Dies ist ein Beispielprojektbeschreibung 2", img: example },
       // ],
@@ -317,13 +335,20 @@ export const projects_data = {
         requirements: ["* Проєкт створювався у рамках  випускного проєкту "],
         problems: [
           {
-            problem_title: "Які були складнощі :",
+            problem_title: "~ Які були складнощі :",
             problem:
               "Макет виявився досить нерівномірним, різна відстань між елементами типу 'nav' та зображеннями які повинні бути у сітці і тому подібне",
             solution: " Вибирала середні приблизні розміри",
             solution_title: "Як вони були вирішені :",
           },
-          // { problem_title: "", problem: "", solution: "" },
+          {
+            problem_title: "~ Проблема з backend :",
+            problem:
+              "backend до цього проекту був локаний і для демонстрації такий варіант не підходив, ",
+            solution:
+              "Залити backend на онлайн хостинг, але у цього методу є й мінуси: при першому завантаженні товари рендеряться не одразу, доводиться чекати коли вони з'являться",
+            solution_title: "Було вирішено :",
+          },
         ],
       },
       descrition: [],

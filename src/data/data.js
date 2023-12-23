@@ -195,7 +195,11 @@ export const personal_data = {
             "  У мене багато хобі: ",
             " А також обожнюю вчитися чомусь новому ♥.",
         ],
-        
+        aboutMeDifferent:{
+            ort:{
+                stadt:"Зараз я проживаю у чудовому місті Дюссельдорф"
+            }
+        },
         cv_text:"скачати резюме",
         cv_link:general_info.cv,
         contacts:{
