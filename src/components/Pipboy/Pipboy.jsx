@@ -6,8 +6,11 @@ import { personal_data } from "../../data/data";
 
 export default function Pipboy() {
   const { t, i18n } = useTranslation();
-  const lang = i18n.language;
+  // const lang = i18n.language;
+  const lang =
+  i18n.language == "ukr" || i18n.language == "de" || i18n.language == "en" ?  i18n.language: "en" ;
   const general = personal_data[lang];
+  
   let currencyYear = new Date().getFullYear();
   const myBirdthYear = parseInt(
     personal_data[lang].birthDate.match(/\d{4}/)[0]

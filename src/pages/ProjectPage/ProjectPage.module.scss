@@ -26,7 +26,7 @@ $backgroundHell: #ffe4c4d7;
 
   &__step_back {
     display: flex;
-    justify-content: start;
+    justify-content:  flex-start;
     color: #ffe4c473;
     max-width: 150px;
     border: none;
@@ -73,7 +73,7 @@ $backgroundHell: #ffe4c4d7;
     display: flex;
     flex-direction: row-reverse;
     align-items: end;
-    justify-content: start;
+    justify-content:  flex-start;
     gap: 30px;
   }
   &__title {

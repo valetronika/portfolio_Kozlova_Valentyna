@@ -8,12 +8,11 @@ import discord1 from "../images/discord (1).png";
 import discord2 from "../images/discord.png";
 import insta2 from "../images/instagram (1).png";
 import insta1 from "../images/instagram.png";
-import cv_de from '../assets/CV_Kozlova_DE.pdf'
+import cv_de from "../assets/CV_Kozlova_DE.pdf";
 // import email_gif from '../images/animated/email.gif'
 
-
 export const general_info = {
-    cv:cv_de,
+    cv: cv_de,
     skills: [
         "JavaScript",
         "HTML",
@@ -22,28 +21,30 @@ export const general_info = {
         "Rudux/toolkit",
         "Responsive Design",
         "Version Control (Git)",
-        
     ],
     email: "valetronika@gmail.com",
-    subject:"letter from portfolio",
-    phone:{
-        phone_de_text:'',
-        phone_de:"01781981537",
-        phone_ua_text:"whatsapp",
-        phone_ua:"+380964819334"
-
+    subject: "letter from portfolio",
+    phone: {
+        phone_de_text: "",
+        phone_de: "01781981537",
+        phone_ua_text: "whatsapp",
+        phone_ua: "+380964819334",
     },
-
-
-
-}
+    hobbys: {
+        games: {
+            wow: "World of Warcraft",
+            baldur: " Baldur's Gate 3",
+            fallout: " Fallout 4",
+            witcher: " Witcher 3",
+        },
+    },
+};
 export const contacts_data = {
     email: "valetronika@gmail.com",
-    telegram:"@valetronika",
-    watsapp:''
+    telegram: "@valetronika",
+    watsapp: "",
     // email_image:email_gif,
-
-}
+};
 export const icons = [
     {
         name: "github",
@@ -89,15 +90,29 @@ export const personal_data = {
             "Sewing",
             "Programming",
             "Polymer Clay Modeling",
-            "Favorite games : World of Warcraft, Baldur's Gate 3, Fallout 4",
+            //   "Favorite games : World of Warcraft, Baldur's Gate 3, Fallout 4, Witcher 3",
         ],
+        hobbiesDifferent: {
+            paint: {
+                title: "Unfortunately, after the occupation of my city in 2022, I couldn't preserve all my artworks; much of it remained in Mariupol.",
+                title2: "However, I managed to restore a few photographs of my works and am pleased to share them with you.",
+                title3: "I enjoy painting with acrylic paints and pastels",
+            },
+            game: {
+                title1: "Favorite games ",
+            },
+            polymer: {
+                text1: "My works with polymer clay, mostly inspired by characters from the game World of Warcraft. The one with tentacles is my favorite and my pride; he also lurks in the darkness."
+            },
+        },
+
         translation: {
             home: "HOME",
             about: "ABOUT ME",
             works: "MY PROJECTS",
             contacts: "CONTACTS",
         },
-        country:"Ukraine",
+        country: "Ukraine",
         location: "Mariupol",
         birthDate: "July 1, 1989",
         graduationDate: "Movember 18, 2023",
@@ -110,13 +125,13 @@ export const personal_data = {
             "I have many hobbies: ",
             "I also love to learn new things ♥.",
         ],
-        cv_text:"Download CV",
-        cv_link:general_info.cv,
+        cv_text: "Download CV",
+        cv_link: general_info.cv,
         contacts: {
             write_me_massage: "Contact me via E-mail:",
             email: general_info.email,
-            alternative_message: " or fill out this form"
-          },
+            alternative_message: " or fill out this form",
+        },
     },
 
     de: {
@@ -131,15 +146,29 @@ export const personal_data = {
             "Nähen",
             "Programmieren",
             "Modellieren mit Polymer Clay",
-            "Lieblingsspiele: World of Warcraft, Baldur's Gate 3, Fallout 4",
+            //   "Lieblingsspiele: World of Warcraft, Baldur's Gate 3, Fallout 4, Witcher 3",
         ],
+        hobbiesDifferent: {
+            paint: {
+                title: "Leider konnte ich nach der Besetzung meiner Stadt im Jahr 2022 nicht alle meine Kunstwerke bewahren; vieles blieb in Mariupol.",
+                title2: "Dennoch gelang es mir, einige Fotografien meiner Arbeiten wiederherzustellen, und ich freue mich, sie mit Ihnen zu teilen.",
+                title3: "Ich male gerne mit Acrylfarben und Pastell",
+            },
+            game: {
+                title1: "Meine Lieblingsspiele",
+            },
+            polymer: {
+                text1:  "Meine Arbeiten mit Polymerton, meistens inspiriert von Charakteren aus dem Spiel World of Warcraft. Derjenige mit den Tentakeln ist mein Favorit und mein Stolz; er lauert auch im Dunkeln."
+            },
+        },
+
         translation: {
             home: "STARTSEITE",
             about: "ÜBER MICH",
             works: "MEIN PROJECTS",
             contacts: "KONTAKTE",
         },
-        country:"Ukraine",
+        country: "Ukraine",
 
         location: "Mariupol",
         birthDate: "1. Juli 1989",
@@ -153,14 +182,13 @@ export const personal_data = {
             "Ich habe viele Hobbys: ",
             " Ich liebe es auch, neue Dinge zu lernen ♥.",
         ],
-        cv_text:"Lebenslauf herunterladen",
-        cv_link:general_info.cv,
+        cv_text: "Lebenslauf herunterladen",
+        cv_link: general_info.cv,
         contacts: {
             write_me_massage: "Kontaktieren Sie mich per E-Mail:",
             email: general_info.email,
-            alternative_message: " oder füllen Sie dieses Formular aus"
-          },
-          
+            alternative_message: " oder füllen Sie dieses Formular aus",
+        },
     },
     ukr: {
         name: "Валентина Козлова",
@@ -173,15 +201,28 @@ export const personal_data = {
             "Шиття",
             "Програмування",
             "Моделювання з полімерної глини",
-            "Улюблені ігри: World of Warcraft, Baldur's Gate 3, Fallout 4",
+            //   "Улюблені ігри: World of Warcraft, Baldur's Gate 3, Fallout 4, Witcher 3 ",
         ],
+        hobbiesDifferent: {
+            paint: {
+                title: "Нажаль після окупації мого міста у 2022 мені не вдалось зберегти усі мої роботи, багато чтого залишилось у Маріуполі ",
+                title2: "Але мені вдалося відновити декілька фоторгафій свої робіт і рада з вами поділитися",
+                title3: "Мені подобається малювати акріловими фарбами та пастеллю",
+            },
+            game: {
+                title1: "Мої улюблені ігри",
+            },
+            polymer: {
+                text1: "Мої роботи з полімерної глини, в основному мене надихали персонажі з гри World of Warcraft. Той що з щупальцями мій улюбленець та моя гордість, він також звітитьться у темряві",
+            },
+        },
         translation: {
             home: "ГОЛОВНА",
             about: "ПРО МЕНЕ",
             works: "МОЇ РОБОТИ",
             contacts: "КОНТАКТИ",
         },
-        country:"Україна",
+        country: "Україна",
 
         location: "Маріуполь",
         birthDate: "1 липня 1989 року",
@@ -195,19 +236,18 @@ export const personal_data = {
             "  У мене багато хобі: ",
             " А також обожнюю вчитися чомусь новому ♥.",
         ],
-        aboutMeDifferent:{
-            ort:{
-                stadt:"Зараз я проживаю у чудовому місті Дюссельдорф"
-            }
+        aboutMeDifferent: {
+            ort: {
+                stadt: "Зараз я проживаю у чудовому місті Дюссельдорф",
+            },
         },
-        cv_text:"скачати резюме",
-        cv_link:general_info.cv,
-        contacts:{
-            write_me_massage:"Зв'яжіться зі мною по E-mail :",
-            email:general_info.email,
-            alternative_message:" або заповніть цю форму"
+        cv_text: "скачати резюме",
+        cv_link: general_info.cv,
+        contacts: {
+            write_me_massage: "Зв'яжіться зі мною по E-mail :",
+            email: general_info.email,
+            alternative_message: " або заповніть цю форму",
         },
-
     },
 };
 

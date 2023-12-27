@@ -34,11 +34,18 @@
   flex-wrap: wrap;
   justify-items: center;
 
-  margin: 100px 50px 500px 50px;
+  // margin: 100px 50px 500px 50px;
+  margin: 100px auto 500px;
   padding: 0 150px;
 
+  max-width: 1600px;
+
   color: #f5eddc;
-gap: 50px;
+  gap: 50px;
+  // ===hobby
+  &__hobbys{
+    height: 85%;
+  }
   // ====pip container
 
   &__pip_container,
@@ -80,6 +87,9 @@ gap: 50px;
     // margin: 0px 0px 100px 0px;
     margin: 0 auto;
     // padding: 50px;
+    &_marg{
+      margin: 50px 0;
+    }
   }
   &__text p {
     padding: 15px;

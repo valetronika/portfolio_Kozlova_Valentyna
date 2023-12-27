@@ -6,32 +6,42 @@ import { useTranslation } from "react-i18next";
 import Pipboy from "../../components/Pipboy/Pipboy";
 import Circles from "../../components/animations/Circles/Circles";
 import { useNavigate } from "react-router-dom";
+import HobbysAlbum from "../../components/HobbysAlbum/HobbysAlbum";
 
 export default function About() {
   const { t, i18n } = useTranslation();
   const lang = i18n.language;
   const general = personal_data[lang];
-  const about = personal_data[lang].aboutMe;
+
+  // const about = personal_data[lang].aboutMe;
+  const about = general?.aboutMe || personal_data["en"].aboutMe;
+  // console.log("about", about);
 
   // //== при переході на сторінку перезляд з початку:
- 
+
   const navigate = useNavigate();
   useEffect(() => {
-    navigate("/about"); 
+    navigate("/about");
     window.scrollTo(0, 0);
     // console.log(" window.scrollTo(0, 0);", window);
   }, [navigate]);
+
   //== skills to string
-  const skills = personal_data[lang].skills.join(", ");
-  // console.log(general);
+  // const skills = personal_data[lang].skills.join(", ");
+  const skills = (
+    personal_data[lang]?.skills || personal_data["en"].skills
+  ).join(", ");
 
   //== hobbies to string
-  const hobbies = personal_data[lang].hobbies.join(", ");
+  // const hobbies = personal_data[lang].hobbies.join(", ");
+  const hobbies = (
+    personal_data[lang]?.hobbies || personal_data["en"].hobbies
+  ).join(", ");
 
   //== full year
   let currencyYear = new Date().getFullYear();
   const myBirdthYear = parseInt(
-    personal_data[lang].birthDate.match(/\d{4}/)[0]
+    personal_data[lang]?.birthDate.match(/\d{4}/)[0]
   );
   const fullYear = currencyYear - myBirdthYear;
 
@@ -72,37 +82,38 @@ export default function About() {
       </div>
 
       {/* ================text */}
-     {about && <div className={s.about__text}>
-        <p> {about[0]}</p>
-        <p> {about[1]}</p>
+      {about && (
+        <div className={s.about__text}>
+          <p> {about[0]}</p>
+          <p> {about[1]}</p>
 
-        <p>
-          {" "}
-          {about[2]} <span>{fullYear}</span>
-          {about[3]}
-        </p>
-        <p>
-          {" "}
-          {about[4]}
-          <span>{skills}</span>
-        </p>
-        <p>
-          {" "}
-          {about[5]}
-          <span>{hobbies}</span>
-        </p>
-        <p> {about[6]}</p>
-      </div>}
+          <p>
+            {" "}
+            {/*  */}
+            {about[2]} <span>{fullYear}</span>
+            {about[3]}
+          </p>
 
-      {/* 
-      <Button
-        className={"download_cv"}
-        func={general.cv_link}
-        download={"Kozlova Valentyna CV"}
-        name={general.cv_text}
-        imgClassName="download_img"
-        imgSrc={download_img}
-      /> */}
+          <p>
+            {" "}
+            {about[5]}
+            <span>{hobbies}</span>
+          </p>
+          <div className={s.about__hobbys}>
+            <HobbysAlbum />
+          </div>
+
+          <div></div>
+
+          <p className={s.about__text_marg}>
+            {" "}
+            {about[4]}
+            <span>{skills}</span>
+          </p>
+
+          <p> {about[6]}</p>
+        </div>
+      )}
     </div>
   );
 }
