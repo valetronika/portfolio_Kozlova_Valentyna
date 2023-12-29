@@ -32,7 +32,7 @@
 .paint {
     
     &__teilImages {
-        border: 3px solid rgb(108, 160, 31);
+        // border: 3px solid rgb(108, 160, 31);
         @include flex();
         flex-direction: column;
         // align-items: center;
@@ -89,15 +89,18 @@
 }
 .small_container{
     display: flex;
-    border: 5px solid rgb(50, 47, 255);
+    max-width: 700px;
+    margin: 0px auto;
+
+    // border: 5px solid rgb(50, 47, 255);
 }
 .small_wrapper {
-    margin: 50px auto;
+    margin: 0px auto;
     width: 600px;
     height: 120px;
     overflow: hidden;
     position: relative;
-    border: 3px solid rgb(255, 123, 47);
+    // border: 3px solid rgb(255, 123, 47);
 
     &_all {
         display: flex;
@@ -111,7 +114,7 @@
 
     &__img {
         // width: 100%;
-        max-height: 120px;
+        max-height: 90px;
 
         width: 60px;
         object-fit: cover;
@@ -126,6 +129,10 @@
     border: none;
     // padding: 50px;
     cursor: pointer;
+    // display: flex;
+    & img{
+        margin-bottom: 50px;
+    }
 }
 .btn_left{
     transform: scaleX(-1);
