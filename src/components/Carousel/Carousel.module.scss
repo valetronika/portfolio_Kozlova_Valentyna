@@ -1,0 +1,104 @@
+.carousel_container {
+    // border: 3px solid rgb(255, 165, 47);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+
+    .thumbnails_container {
+        display: flex;
+        align-items: center;
+        max-width: 99%;
+        // border: 3px solid rgb(154, 47, 255);
+
+        .arrow_button {
+            font-size: 20px;
+            cursor: pointer;
+            // margin: 0 10px;
+            background: none;
+            border: none;
+            color: white;
+            padding: 10px;
+            outline: none;
+        }
+
+        .thumbnails_wrapper {
+            display: flex;
+            overflow-x: auto;
+            margin: 0 10px;
+
+            .thumbnail {
+                width: 50px;
+                height: 50px;
+                // margin-right: 10px;
+                cursor: pointer;
+                border: 1px solid transparent;
+                transition: border-color 0.3s;
+                object-fit: cover;
+
+                &.selected {
+                    border-color: #3498db;
+                }
+                // @media(max-width:780px){
+                //     width: 40px;
+                //     height: 40px;
+                // }
+                // @media(max-width:430px){
+                //     width: 30px;
+                //     height: 30px;
+                // }
+            }
+        }
+    }
+
+    .main_image_container {
+        // border: 3px solid greenyellow;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        .main_image {
+            max-width: 90%;
+            height: auto;
+            max-height: 500px;
+        }
+
+        .main_arrow_button {
+            font-size: 20px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: white;
+            padding: 10px;
+            outline: none;
+        }
+    }
+
+    @media (max-width: 680px) {
+        .thumbnails_container {
+            .thumbnails_wrapper {
+                .thumbnail {
+                    width: 35px;
+                    height: 40px;
+                }
+            }
+        }
+        .main_image_container{
+            .main_image{
+                max-width: 80%;
+            }
+        }
+
+        @media (max-width: 350px) {
+            .thumbnails_container {
+                .thumbnails_wrapper {
+                    .thumbnail {
+                        width: 30px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

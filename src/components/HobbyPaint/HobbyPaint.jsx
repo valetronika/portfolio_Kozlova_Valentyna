@@ -5,6 +5,7 @@ import { paint } from "../../data/hobbys_paint";
 import { useTranslation } from "react-i18next";
 import {icons} from '../../data/animated_icons'
 import Album from "../Album/Album";
+import Carousel from "../Carousel/Carousel";
 
 
 export default function HobbyPaint() {
@@ -43,7 +44,8 @@ export default function HobbyPaint() {
             {/* контейнер з малюнками */}
             <div className={s.paint__teilImages}>
 
-                <Album arr={paint} />
+                {/* <Album arr={paint} /> */}
+                <Carousel images={paint}/>
             </div>
         </div>
     );

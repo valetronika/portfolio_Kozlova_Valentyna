@@ -1,7 +1,6 @@
 @mixin flex {
     display: flex;
-    //   flex-direction: row;
-    // justify-content: center;
+
     transition: all 1s ease;
 }
 
@@ -34,13 +33,11 @@
         @include flex();
         flex-direction: column;
 
-
         height: 100%;
         min-height: 1000px;
 
         width: 100%;
         max-width: 1500px;
-
     }
     // ==container w big image
     // buttons
@@ -56,7 +53,6 @@
     }
 
     &__mainImage {
-
         @include flex();
         align-items: center;
         justify-content: center;
@@ -79,10 +75,10 @@
 }
 .small_container {
     display: flex;
+    // width: 100%;
     max-width: 700px;
     margin: 0px auto;
-
-    // border: 5px solid rgb(50, 47, 255);
+    overflow: hidden;
 }
 .small_wrapper {
     margin: 0px auto;
@@ -90,19 +86,18 @@
     height: 120px;
     overflow: hidden;
     position: relative;
-    // border: 3px solid rgb(255, 123, 47);
 
     &_all {
         display: flex;
         flex-direction: row;
         position: absolute;
         top: 0;
-        // left: 0;
         transition: all 1s ease;
+
+        // display: none;
     }
 
     &__img {
-        // width: 100%;
         max-height: 90px;
 
         width: 60px;
@@ -117,9 +112,7 @@
 .btn_right {
     width: 50px;
     border: none;
-    // padding: 50px;
     cursor: pointer;
-    // display: flex;
     & img {
         margin-bottom: 50px;
     }

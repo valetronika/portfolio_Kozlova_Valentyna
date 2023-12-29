@@ -5,6 +5,7 @@ import { personal_data } from "../../data/data";
 import Album from "../Album/Album";
 import { useTranslation } from "react-i18next";
 import { icons } from "../../data/animated_icons";
+import Carousel from "../Carousel/Carousel";
 
 export default function HobbyPolymer() {
     const { t, i18n } = useTranslation();
@@ -28,7 +29,8 @@ export default function HobbyPolymer() {
                         alt="lamp"
                     />
             </div>
-            <Album arr={polymer_data} />
+            {/* <Album arr={polymer_data} /> */}
+            <Carousel images={polymer_data}/>
 
             {/* <div className={s.polymer__mini}></div>
             <div className={s.polymer__big}></div> */}

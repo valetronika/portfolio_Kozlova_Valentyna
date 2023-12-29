@@ -156,6 +156,7 @@
 
     grid-template-columns: repeat(1, 1fr);
     gap: 40px;
+    justify-content: center;
     &__text {
       margin: 20px;
     }
@@ -196,9 +197,9 @@
     }
   }
 }
-@media (max-width: 510px) {
+@media (max-width: 530px) {
   .about {
-    margin: 100px 20px 500px 0px ;
+    margin: 100px 0px 500px 0px ;
     padding: 0 0 200px 0;
 
     &__text p {

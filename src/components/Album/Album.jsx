@@ -7,21 +7,20 @@ export default function Album({ arr }) {
     const animated_icons_arr = icons;
 
     const [isMainPhoto, setIsMainPhoto] = useState(0);
-    const [widthSmallImg, setWidthSmallImg] = useState(60);
-    const [widthContainer, setWidthContainer] = useState(600);
+    const [widthSmallImg, setWidthSmallImg] = useState(50);
+    const [widthContainer, setWidthContainer] = useState(500);
     const quantity = arr.length;
     const arrow_img = animated_icons_arr.arrow;
+    console.log("Ширина экрана:", window.innerWidth);
 
     const handleCkickImage = (ind) => {
         setIsMainPhoto(ind);
     };
 
-
     const [leftPosition, setLeftPosition] = useState(0);
     const styleSmallImages = {
         left: leftPosition,
     };
-
 
     // = left buttons
     const handleClickLeft = () => {
@@ -57,6 +56,26 @@ export default function Album({ arr }) {
             setLeftPosition(leftPosition + widthContainer);
         }
     };
+
+    // test
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
+
+        // Установка слушателя при монтировании компонента
+        window.addEventListener("resize", handleResize);
+
+        // Убираем слушателя при размонтировании компонента
+        return () => {
+            window.removeEventListener("resize", handleResize);
+        };
+    }, []); 
+    console.log(windowWidth);
+
+
 
     return (
         <div className={s.paint__teilImages}>
