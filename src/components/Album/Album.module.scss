@@ -1,7 +1,7 @@
 @mixin flex {
     display: flex;
     //   flex-direction: row;
-    justify-content: center;
+    // justify-content: center;
     transition: all 1s ease;
 }
 
@@ -30,20 +30,17 @@
 }
 
 .paint {
-    
     &__teilImages {
-        // border: 3px solid rgb(108, 160, 31);
         @include flex();
         flex-direction: column;
-        // align-items: center;
-    // padding: 50px 0;
 
-    height: 1000px;
+
+        height: 100%;
+        min-height: 1000px;
 
         width: 100%;
         max-width: 1500px;
 
-        // position: relative;
     }
     // ==container w big image
     // buttons
@@ -59,8 +56,6 @@
     }
 
     &__mainImage {
-        // border: 3px solid rgb(108, 160, 31);
-        height: 780px;
 
         @include flex();
         align-items: center;
@@ -70,10 +65,7 @@
         position: relative;
 
         &_img {
-            // max-height: 100%;
-            //   width: 80%;
             height: 100%;
-            //   border: 3px solid greenyellow;
             & img {
                 max-width: 100%;
                 max-height: 100%;
@@ -84,10 +76,8 @@
         }
     }
     //   ==container w small images
-
-
 }
-.small_container{
+.small_container {
     display: flex;
     max-width: 700px;
     margin: 0px auto;
@@ -109,7 +99,6 @@
         top: 0;
         // left: 0;
         transition: all 1s ease;
-
     }
 
     &__img {
@@ -119,22 +108,22 @@
         width: 60px;
         object-fit: cover;
         transition: all 1s ease;
-        &:hover{
+        &:hover {
             width: 120px;
         }
     }
 }
-.btn_left, .btn_right{
+.btn_left,
+.btn_right {
     width: 50px;
     border: none;
     // padding: 50px;
     cursor: pointer;
     // display: flex;
-    & img{
+    & img {
         margin-bottom: 50px;
     }
 }
-.btn_left{
+.btn_left {
     transform: scaleX(-1);
 }
-

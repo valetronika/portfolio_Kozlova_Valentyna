@@ -22,6 +22,7 @@ export default function Album({ arr }) {
         left: leftPosition,
     };
 
+
     // = left buttons
     const handleClickLeft = () => {
         let index = +isMainPhoto - 1;

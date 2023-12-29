@@ -16,7 +16,7 @@ export default function HobbyGames() {
 
   return (
     <div>
-      <p className={s.hobbys_title}> <img className={s.hobbys_animation} src={animation.watter_gun} alt="watter_gun" />  <img className={s.hobbys_animation} src={animation.flying_sauer} alt="watter_gun" /> {general.game.title1}  :</p>
+      <p className={`${s.hobbys_title} text__title `}> <img className={`${s.hobbys_animation} icon__transparent`} src={animation.watter_gun} alt="watter_gun" />  <img className={`${s.hobbys_animation} icon__transparent`} src={animation.flying_sauer} alt="watter_gun" /> {general.game.title1}  :</p>
       <div className={s.hobbys__play} >
         {/* Fallout 4 */}
         <div className={s.hobbys__play_container1} >

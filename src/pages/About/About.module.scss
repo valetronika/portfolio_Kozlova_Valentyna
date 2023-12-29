@@ -85,6 +85,9 @@
   // ==основний текст
   &__text {
     // margin: 0px 0px 100px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     margin: 0 auto;
     // padding: 50px;
     &_marg{
@@ -94,7 +97,7 @@
   &__text p {
     padding: 15px;
     line-height: 1.5;
-    font-size: 20px;
+    // font-size: 20px;
   }
   &__download_cv {
     display: flex;
@@ -199,7 +202,8 @@
     padding: 0 0 200px 0;
 
     &__text p {
-      font-size: 15px;
+      // font-size: 15px;
+      margin:0 20px;
     }
   }
 }

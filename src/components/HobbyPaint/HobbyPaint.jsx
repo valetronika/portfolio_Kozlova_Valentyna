@@ -20,7 +20,10 @@ export default function HobbyPaint() {
         <div className={s.paint}>
             {/* контейнер з text */}
 
-            <div className={s.paint__text}>
+            <div 
+            className="text_about"
+            // className={s.paint__text}
+            >
                 {general.paint.title}{" "}
                 <img
                     className={s.paint__span}
@@ -30,8 +33,10 @@ export default function HobbyPaint() {
                 {general.paint.title2}
             </div>
 
-            <div className={s.paint__title}>
-                <img src={animated_icons_arr.paint_img} alt="paint icon" />{" "}
+            <div 
+            className={`${s.paint__title} text__title`}
+            >
+                {/* <img src={animated_icons_arr.paint_img} alt="paint icon" />{" "} */}
                 {general.paint.title3} :
             </div>
 

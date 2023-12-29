@@ -19,11 +19,23 @@ $mainColor: #f5eddc;
         background-color: #375f2f70; /* цвет ползунка */
     }
 }
-
-.general__page{
-
+// це повторювальнi класи для тексту у компонентах в хоббi
+.text_about{
+    padding: 20px;
+    font-size: 1.2rem;
+    line-height: 2;
+    background-color: transparent;
 }
-
+.text__title{
+    padding: 20px;
+margin: 50px 0;
+    background-color: antiquewhite;
+    color: black;
+}
+.icon__transparent{
+    background-color: transparent;
+}
+// -----------------
 .page_container {
     margin: 0 auto;
     // padding: 20px;

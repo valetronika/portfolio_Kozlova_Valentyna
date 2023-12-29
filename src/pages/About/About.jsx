@@ -83,7 +83,10 @@ export default function About() {
 
       {/* ================text */}
       {about && (
-        <div className={s.about__text}>
+        <div 
+        className="text_about"
+        // className={s.about__text}
+        >
           <p> {about[0]}</p>
           <p> {about[1]}</p>
 
