@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import s from './HobbyGames.module.scss'
-import {general_info, personal_data} from '../../data/data'
+import { personal_data} from '../../data/data'
 import { useTranslation } from 'react-i18next';
 import { play_data } from "../../data/hobbys_play";
 
@@ -13,7 +13,6 @@ export default function HobbyGames() {
     personal_data["en"].hobbiesDifferent;
 
     const animation= play_data.images
-    console.log(animation)
 
   return (
     <div>

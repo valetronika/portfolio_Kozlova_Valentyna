@@ -62,6 +62,7 @@ export default function Home() {
     console.error(`Дані мови ${lang} відсутні.`);
     return <div>Даніе відсутні</div>;
   }
+  // console.log('window.innerWidth', window.innerWidth)
 
 
   return (

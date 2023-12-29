@@ -1,18 +1,21 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import s from "./Album.module.scss";
-import { smail } from "../../data/hobbys_paint";
+// import { smail } from "../../data/hobbys_paint";
+import { icons } from "../../data/animated_icons";
 
 export default function Album({ arr }) {
-
+    const animated_icons_arr = icons;
 
     const [isMainPhoto, setIsMainPhoto] = useState(0);
+    const [widthSmallImg, setWidthSmallImg] = useState(60);
+    const [widthContainer, setWidthContainer] = useState(600);
     const quantity = arr.length;
-    const arrow_img = smail.arrow;
+    const arrow_img = animated_icons_arr.arrow;
+
     const handleCkickImage = (ind) => {
         setIsMainPhoto(ind);
     };
 
-    //
 
     const [leftPosition, setLeftPosition] = useState(0);
     const styleSmallImages = {
@@ -28,9 +31,9 @@ export default function Album({ arr }) {
         setIsMainPhoto(index);
     };
     const handleClickLeftMini = () => {
-        let left = Math.abs((leftPosition - 1000) / 100);
+        let left = Math.abs((leftPosition - widthContainer) / widthSmallImg);
         if (quantity - left > 0) {
-            setLeftPosition(leftPosition - 1000);
+            setLeftPosition(leftPosition - widthContainer);
         } else {
             setLeftPosition(0);
         }
@@ -45,34 +48,28 @@ export default function Album({ arr }) {
     const handleClickRightMini = () => {
         const itemsPerPage = 10;
         const maxLeftPosition =
-            -1 * (Math.floor(quantity / itemsPerPage) * 1000);
+            -1 * (Math.floor(quantity / itemsPerPage) * widthContainer);
 
-        if (leftPosition + 1000 > 0) {
+        if (leftPosition + widthContainer > 0) {
             setLeftPosition(maxLeftPosition);
         } else {
-            setLeftPosition(leftPosition + 1000);
+            setLeftPosition(leftPosition + widthContainer);
         }
     };
 
-    // class for button
-    // const classNameButton = ()=>{
-    //     if(leftPosition==0){
-    //         return s.blinkin_right
-    //     } else if(leftPosition )
-    // }
     return (
         <div className={s.paint__teilImages}>
             {/* контейнер з маленькими картинками */}
             <div className={s.small_container}>
-                <button
-                    className={s.btn_left}
-                    onClick={() => handleClickLeftMini()}
-                >
-                    {arr.length > 10 && <img src={arrow_img} alt="arrow" />}
-                </button>
-                <div
-                    className={s.small_wrapper}
-                >
+                {arr.length > 10 && (
+                    <button
+                        className={s.btn_left}
+                        onClick={() => handleClickLeftMini()}
+                    >
+                        {<img src={arrow_img} alt="arrow" />}
+                    </button>
+                )}
+                <div className={s.small_wrapper}>
                     <div
                         style={styleSmallImages}
                         className={s.small_wrapper_all}
@@ -88,12 +85,14 @@ export default function Album({ arr }) {
                         ))}
                     </div>
                 </div>
-                <button
-                    className={s.btn_right}
-                    onClick={() => handleClickRightMini()}
-                >
-                    {arr.length > 10 && <img src={arrow_img} alt="arrow" />}
-                </button>
+                {arr.length > 10 && (
+                    <button
+                        className={s.btn_right}
+                        onClick={() => handleClickRightMini()}
+                    >
+                        {<img src={arrow_img} alt="arrow" />}
+                    </button>
+                )}
             </div>
             {/*  контейнер з вибраною картнкою */}
             <div className={s.paint__mainImage}>

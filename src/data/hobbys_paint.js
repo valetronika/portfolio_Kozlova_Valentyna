@@ -7,10 +7,11 @@ import ship from "../images/hobby/paint/ship.jpg";
 import space from "../images/hobby/paint/space.jpg";
 import tirp from "../images/hobby/paint/tirp.png";
 import tirp2 from "../images/hobby/paint/tirp2.jpg";
-import sad_cat from "../images/sad_cat.png";
-import paint_img from "../images/animated/drawing.gif";
 import bart from "../images/hobby/paint/bart.png";
-import arrow from "../images/right-arrow.png";
+
+// import paint_img from "../images/animated/drawing.gif";
+// import sad_cat from "../images/sad_cat.png";
+// import arrow from "../images/right-arrow.png";
 
 export const paint = [
     girl,
@@ -25,8 +26,8 @@ export const paint = [
     bart,
 ];
 
-export const smail = {
-    sad_cat,
-    paint_img,
-    arrow,
-};
+// export const smail = {
+//     // sad_cat,
+//     // paint_img,
+//     // arrow,
+// };

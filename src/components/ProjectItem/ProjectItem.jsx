@@ -7,6 +7,7 @@ export default function ProjectItem({ element, className }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
+    
     //2 Функція, яка буде викликатись при зміні розміру екрану
     function handleResize() {
       setIsMobile(window.innerWidth <= 1025);
@@ -23,6 +24,7 @@ export default function ProjectItem({ element, className }) {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+  // console.log('window.innerWidth', window.innerWidth)
 
   //2 для перехіду на сторінку
   const navigate = useNavigate();

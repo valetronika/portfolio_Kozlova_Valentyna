@@ -33,11 +33,15 @@ export default function ProjectPage() {
       };
     }
   }, [isJumping]);
+
+  
 // шаг назад
 const navigate = useNavigate();
   const handleBackClick = () => {
     navigate(-1);
   };
+
+
   return (
     <div className={s.project}>
       <button onClick={handleBackClick} className={s.project__step_back}>{` << back`}</button>

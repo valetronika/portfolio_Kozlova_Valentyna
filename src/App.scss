@@ -8,6 +8,16 @@ $mainColor: #f5eddc;
     font-family: Arial, Helvetica, sans-serif;
     
     background-color: $mainBackgroundColor;
+
+
+
+    &::-webkit-scrollbar {
+        width: 14px; 
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: #375f2f70; /* цвет ползунка */
+    }
 }
 
 .general__page{
@@ -28,6 +38,7 @@ $mainColor: #f5eddc;
 .main__block {
     display: flex;
     // grid-template-columns: 15% 85%;/
+    
 }
 
 

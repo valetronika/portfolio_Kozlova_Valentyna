@@ -30,42 +30,18 @@
 }
 
 .paint {
-    padding: 50px 0;
-    height: 1000px;
-    max-width: 1500px;
-
-    @include flex();
-    flex-direction: column;
-    align-items: center;
-
-    // border: 3px solid rgb(108, 160, 31);
-
-    //   text
-    &__title {
-        display: flex;
-        align-items: center;
-        font-size: 25px;
-        padding: 20px 0;
-        & img {
-            width: 60px;
-            &:hover {
-                transform: scale(1.5);
-                animation: shake 2s ease-in-out infinite;
-            }
-        }
-    }
-    &__text {
-        padding: 20px;
-        font-size: 1.2rem;
-        line-height: 2;
-    }
-    // imgs
+    
     &__teilImages {
+        border: 3px solid rgb(108, 160, 31);
         @include flex();
         flex-direction: column;
         // align-items: center;
+    // padding: 50px 0;
+
+    height: 1000px;
 
         width: 100%;
+        max-width: 1500px;
 
         // position: relative;
     }
@@ -108,47 +84,20 @@
         }
     }
     //   ==container w small images
-    // &__container {
-    //     //   @include flex();
 
-    //     // flex-direction: row;
-    //     // display: grid;
 
-    //     height: 150px;
-    //     //   grid-template-columns: repeat(7, 1fr);
-    //     width: 90%;
-    //     transition: all 1s ease;
-    //     overflow: hidden;
-    // }
-    // &__img {
-    //     max-width: 80px;
-    //     max-height: 100px;
-    //     object-fit: cover;
-    //     transition: all 1s ease;
-
-    //     &:hover {
-    //         max-width: 90px;
-    //         max-height: 120px;
-    //         transition: all 1s ease;
-    //     }
-    // }
-    &__span {
-        width: 20px;
-        height: 20px;
-        // filter: brightness(0) invert(1) hue-rotate(180deg);
-    }
-
-    
 }
 .small_container{
     display: flex;
+    border: 5px solid rgb(50, 47, 255);
 }
 .small_wrapper {
     margin: 50px auto;
-    width: 1000px;
+    width: 600px;
     height: 120px;
     overflow: hidden;
     position: relative;
+    border: 3px solid rgb(255, 123, 47);
 
     &_all {
         display: flex;
@@ -164,7 +113,7 @@
         // width: 100%;
         max-height: 120px;
 
-        width: 100px;
+        width: 60px;
         object-fit: cover;
         transition: all 1s ease;
         &:hover{
@@ -175,9 +124,10 @@
 .btn_left, .btn_right{
     width: 50px;
     border: none;
-    padding: 50px;
+    // padding: 50px;
     cursor: pointer;
 }
 .btn_left{
     transform: scaleX(-1);
 }
+
