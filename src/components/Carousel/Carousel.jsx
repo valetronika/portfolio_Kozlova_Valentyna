@@ -11,8 +11,10 @@ const Carousel = ({ images }) => {
   };
 
   const handlePrevClick = () => {
+    // const images = [...images];
     setStartIndex((prevIndex) => {
-      const newIndex = prevIndex - visibleThumbnails;
+      // const newIndex = prevIndex - visibleThumbnails;
+      const newIndex = (startIndex - visibleThumbnails + images.length) % images.length;
       return newIndex < 0 ? images.length - visibleThumbnails : newIndex;
     });
   };
