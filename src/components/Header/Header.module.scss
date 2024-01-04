@@ -148,6 +148,7 @@ $mainColor: #f5eddc;
         opacity: 0;
         transition: all 0.5s ease;
         padding: 150px 30px;
+
         @media (max-height: 440px) {
           gap: 10px;
           padding: 90px 30px;
@@ -160,10 +161,10 @@ $mainColor: #f5eddc;
         }
       }
       &__ul_active {
-        right: -20vw;
+        right: -10vw;
         top: -10px;
 
-        border-left: 1px solid #ffffff34;
+        border-left: 1px solid #03744534;
         border-right: 1px solid #ffffff34;
         opacity: 1;
         transition: all 0.5s ease;

@@ -5,20 +5,72 @@
     align-items: center;
     max-width: 800px;
     margin: 0 auto;
+    //== modal
+    .modal_images {
+        // border: 3px solid greenyellow;
+        // padding: 100px 0;
+        position: fixed;
+        top: 0;
+        left: 0;
 
+        z-index: 6;
+        width: 100%;
+        height: 100%;
+        background-color: #0e1817ee;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        &_child {
+            background: none;
+        }
+        &_close {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            gap: 20px;
+
+            // align-self: flex-end;
+
+            margin: 30px auto;
+            width: 150px;
+            height: 50px;
+
+            color: rgb(230, 210, 210);
+            background: transparent;
+            cursor: pointer;
+
+            font-size: 25px;
+
+            & img {
+                max-height: 50px;
+                background: transparent;
+                object-fit: contain;
+                z-index: 2;
+            }
+        }
+        &_wrapper {
+            z-index: 7;
+            max-width: 100%;
+            display: flex;
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: center;
+        }
+    }
     .thumbnails_container {
         display: flex;
         align-items: center;
         max-width: 99%;
-        // border: 3px solid rgb(154, 47, 255);
 
         .arrow_button {
             font-size: 20px;
             cursor: pointer;
-            // margin: 0 10px;
             background: none;
             border: none;
-            color: white;
+            color: #d5ece66c;
             padding: 10px;
             outline: none;
         }
@@ -40,14 +92,6 @@
                 &.selected {
                     border-color: #3498db;
                 }
-                // @media(max-width:780px){
-                //     width: 40px;
-                //     height: 40px;
-                // }
-                // @media(max-width:430px){
-                //     width: 30px;
-                //     height: 30px;
-                // }
             }
         }
     }
@@ -69,7 +113,7 @@
             cursor: pointer;
             background: none;
             border: none;
-            color: white;
+            color: #d5ece66c;
             padding: 10px;
             outline: none;
         }
@@ -84,8 +128,8 @@
                 }
             }
         }
-        .main_image_container{
-            .main_image{
+        .main_image_container {
+            .main_image {
                 max-width: 80%;
             }
         }

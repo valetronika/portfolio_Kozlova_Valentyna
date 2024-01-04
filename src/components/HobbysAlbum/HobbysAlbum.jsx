@@ -3,6 +3,7 @@ import React from "react";
 import HobbyGames from "../HobbyGames/HobbyGames";
 import HobbyPaint from "../HobbyPaint/HobbyPaint";
 import HobbyPolymer from "../HobbyPolymer/HobbyPolymer";
+import HobbyTailoring from "../HobbyTailoring/HobbyTailoring";
 
 export default function HobbysAlbum() {
     return (
@@ -10,6 +11,7 @@ export default function HobbysAlbum() {
             <HobbyGames />
             <HobbyPaint />
             <HobbyPolymer />
+            <HobbyTailoring/>
         </div>
     );
 }

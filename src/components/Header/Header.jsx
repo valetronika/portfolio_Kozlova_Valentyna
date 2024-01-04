@@ -7,9 +7,9 @@ import useLocalStorage from "../../hooks/use-localstorage";
 import { Fade as Hamburger } from "hamburger-react";
 
 export default function Header() {
+  
   // toggle
   const [isOpen, setOpen] = useState(false);
-  // console.log(isOpen);
   const classNameUlList = isOpen
     ? `${s.nav__ul} ${s.nav__ul_active}`
     : `${s.nav__ul}`;
@@ -17,9 +17,12 @@ export default function Header() {
   // для перекладача
   const { t, i18n } = useTranslation();
   // const lang = i18n.language;
+  // так була помилка якщо браузер ставить сам мову
   const lang =
     i18n.language == "ru" ? "en" : i18n.language;
     console.log(' header',lang)
+
+
   const data = personal_data[lang];
   const [language, setLanguage] = useLocalStorage("language", "en");
   const handlerLanguageChange = (selectedLanguage) => {
@@ -30,7 +33,6 @@ export default function Header() {
   if (!data) {
     return <div>Данные не найдены для текущего языка.</div>;
   }
-  // console.log(isOpen)
   // active link
   const setActiveLink = ({ isActive }) => {
     return isActive ? `${s.nav__li} ${s.nav__li_active}` : `${s.nav__li} `;

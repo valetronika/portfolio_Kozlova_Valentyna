@@ -2,7 +2,7 @@ import React from "react";
 import s from "./HobbyPolymer.module.scss";
 import { polymer_data } from "../../data/hobby_polymer";
 import { personal_data } from "../../data/data";
-import Album from "../Album/Album";
+// import Album from "../Album/Album";
 import { useTranslation } from "react-i18next";
 import { icons } from "../../data/animated_icons";
 import Carousel from "../Carousel/Carousel";

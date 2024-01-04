@@ -104,6 +104,12 @@ export const personal_data = {
             polymer: {
                 text1: "My works with polymer clay, mostly inspired by characters from the game World of Warcraft. The one with tentacles is my favorite and my pride; he also lurks in the darkness."
             },
+            tailor:{
+                // text1:"Дуже подобається шити одяг. У якийсь момент я купувала тільки в'язані речі та взуття, все інше шила сама "
+                text1: "I really enjoy sewing clothes. At some point, I used to only buy knitted items and shoes; everything else, I made myself.",
+                text2:"Here are some photos of my work:",
+
+            }
         },
 
         translation: {
@@ -160,6 +166,12 @@ export const personal_data = {
             polymer: {
                 text1:  "Meine Arbeiten mit Polymerton, meistens inspiriert von Charakteren aus dem Spiel World of Warcraft. Derjenige mit den Tentakeln ist mein Favorit und mein Stolz; er lauert auch im Dunkeln."
             },
+            tailor:{
+                // text1:"Дуже подобається шити одяг. У якийсь момент я купувала тільки в'язані речі та взуття, все інше шила сама "
+                text1: "Ich nähe Kleidung sehr gerne. Zu einem bestimmten Zeitpunkt habe ich nur gestrickte Kleidungsstücke und Schuhe gekauft; alles andere habe ich selbst genäht.",
+                text2:"Hier sind einige Fotos von der Kleidung, die ich genäht habe :",
+
+            },
         },
 
         translation: {
@@ -215,6 +227,10 @@ export const personal_data = {
             polymer: {
                 text1: "Мої роботи з полімерної глини, в основному мене надихали персонажі з гри World of Warcraft. Той що з щупальцями мій улюбленець та моя гордість, він також звітиться у темряві",
             },
+            tailor:{
+                text1:"Дуже подобається шити одяг. У якийсь момент я купувала тільки в'язані речі та взуття, все інше шила сама ",
+                text2:"Ось трохи фото моїх робіт:",
+            }
         },
         translation: {
             home: "ГОЛОВНА",
