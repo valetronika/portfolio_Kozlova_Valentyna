@@ -14,8 +14,6 @@ const TypingAnimation = ({ text }) => {
     }
   }, [index, text]);
 
-  // console.log(index);
-  // const colorLetterClass = index == text.length
 
   return (
     <span className={s.typing_container}>

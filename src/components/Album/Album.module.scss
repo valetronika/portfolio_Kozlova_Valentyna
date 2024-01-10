@@ -12,7 +12,6 @@
     width: 50px;
     height: calc(100% - 150px);
     min-height: 50%;
-    //   padding: 160px;
     transition: all 1s ease;
 
     background-color: rgba(20, 201, 156, 0);
@@ -22,7 +21,6 @@
     color: rgba(245, 245, 220, 0.548);
 
     &:hover {
-        // background-color: rgba(86, 126, 116, 0.315);
         font-size: 35px;
         cursor: pointer;
     }
@@ -75,7 +73,6 @@
 }
 .small_container {
     display: flex;
-    // width: 100%;
     max-width: 700px;
     margin: 0px auto;
     overflow: hidden;
@@ -93,8 +90,6 @@
         position: absolute;
         top: 0;
         transition: all 1s ease;
-
-        // display: none;
     }
 
     &__img {

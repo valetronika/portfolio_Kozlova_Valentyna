@@ -4,9 +4,9 @@ import { personal_data } from "../data/data";
 
 function Profile() {
     const { t, i18n } = useTranslation();
-    const lang = i18n.language; // Текущий язык приложения
+    const lang = i18n.language; 
 
-    const data = personal_data[lang]; // Получаем данные для текущего языка
+    const data = personal_data[lang]; 
 
     if (!data) {
         return <div>Данные не найдены для текущего языка.</div>;

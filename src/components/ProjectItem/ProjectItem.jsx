@@ -24,7 +24,6 @@ export default function ProjectItem({ element, className }) {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  // console.log('window.innerWidth', window.innerWidth)
 
   //2 для перехіду на сторінку
   const navigate = useNavigate();
@@ -51,9 +50,7 @@ export default function ProjectItem({ element, className }) {
     : isHovered
     ? `${s[className]} ${s.hovered}`
     : s[className];
-    // const containerClassName =  isHovered
-    // ? `${s[className]} ${s.hovered}`
-    // : s[className];
+
 
   return (
     <div

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import s from "./Carousel.module.scss";
 import Modalmage from "../Modalmage/Modalmage";
-import { icons } from "../../data/animated_icons";
 
 const Carousel = ({ images }) => {
     const [isShowModal, setIsShowModal] = useState(false);
@@ -14,9 +13,7 @@ const Carousel = ({ images }) => {
     };
 
     const handlePrevClick = () => {
-        // const images = [...images];
         setStartIndex((prevIndex) => {
-            // const newIndex = prevIndex - visibleThumbnails;
             const newIndex =
                 (startIndex - visibleThumbnails + images.length) %
                 images.length;
@@ -49,16 +46,12 @@ const Carousel = ({ images }) => {
         setIsShowModal(!isShowModal);
         const newCurrentIndex = images.indexOf(selectedImage);
         setCurrentIndex(newCurrentIndex);
-        // console.log(`Index of selected image: ${currentIndex}`);
     };
     const handleClickCloseModal = (e) => {
-        // e.stopPropagation()
-        // setIsShowModal(!isShowModal)
         if (
             e.target.classList.contains(s.modal_images) ||
-            e.target.classList.contains(s.modal_images_child)||
-            e.target.classList.contains(s.modal_images_close) 
-            
+            e.target.classList.contains(s.modal_images_child) ||
+            e.target.classList.contains(s.modal_images_close)
         ) {
             setIsShowModal(false);
         }
@@ -74,18 +67,7 @@ const Carousel = ({ images }) => {
                         onClick={(e) => handleClickCloseModal(e)}
                         className={s.modal_images_close}
                     >
-                        <p
-                            // onClick={(e) => handleClickCloseModal(e)}
-                            className={s.modal_images_child}
-                        >
-                            close   {"   "} X
-                        </p>{" "}
-                        {/* <img
-                            // onClick={(e) => handleClickCloseModal(e)}
-                            src={icons.wach}
-                            alt="icon cat"
-                            className={s.modal_images_child}
-                        /> */}
+                        <p className={s.modal_images_child}>close {"   "} X</p>{" "}
                     </div>
                     <div className={s.modal_images_wrapper}>
                         <Modalmage images={images} ind={currentIndex} />

@@ -10,7 +10,6 @@ export default function Phone() {
   const general = general_info.phone.phone_de;
   const whatsapp = general_info.phone.phone_ua
   const whatsappLink = `https://wa.me/${whatsapp}`;
-  // console.log(general);
 
   return (
     <div className={s.contacts}>

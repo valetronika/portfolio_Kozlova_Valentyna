@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import s from "./Album.module.scss";
-// import { smail } from "../../data/hobbys_paint";
 import { icons } from "../../data/animated_icons";
 
 export default function Album({ arr }) {

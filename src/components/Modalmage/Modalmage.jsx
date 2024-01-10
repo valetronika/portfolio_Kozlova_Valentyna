@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import s from "./Modalmage.module.scss";
 
 export default function Modalmage({ images, ind }) {
-    // console.log('images',images,'ind',ind)
 
-    // console.log(icons)
     const [index, setIndex] = useState(ind ?? 0);
     const [selectedImage, setSelectedImage] = useState(images[index]);
 

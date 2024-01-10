@@ -1,5 +1,4 @@
 .carousel_container {
-    // border: 3px solid rgb(255, 165, 47);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -7,8 +6,6 @@
     margin: 0 auto;
     //== modal
     .modal_images {
-        // border: 3px solid greenyellow;
-        // padding: 100px 0;
         position: fixed;
         top: 0;
         left: 0;
@@ -31,8 +28,6 @@
             align-items: center;
             justify-content: space-around;
             gap: 20px;
-
-            // align-self: flex-end;
 
             margin: 30px auto;
             width: 150px;
@@ -83,7 +78,6 @@
             .thumbnail {
                 width: 50px;
                 height: 50px;
-                // margin-right: 10px;
                 cursor: pointer;
                 border: 1px solid transparent;
                 transition: border-color 0.3s;
@@ -97,7 +91,6 @@
     }
 
     .main_image_container {
-        // border: 3px solid greenyellow;
         margin-top: 20px;
         display: flex;
         justify-content: space-between;

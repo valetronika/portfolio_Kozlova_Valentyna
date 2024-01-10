@@ -4,7 +4,6 @@ import s from "./Button.module.scss";
 export default function Button({ name, func, className, download,imgClassName,imgSrc }) {
   return (
     <div>
-      {/* {className ==='view__result' && <button className={s[className]}>{name}</button>} */}
       {className === "view__result" && (
         <a href={func} target="_blank" className={s[className]}>
           {name}

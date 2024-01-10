@@ -4,7 +4,6 @@ import s from "./HobbyPaint.module.scss";
 import { paint } from "../../data/hobbys_paint";
 import { useTranslation } from "react-i18next";
 import {icons} from '../../data/animated_icons'
-import Album from "../Album/Album";
 import Carousel from "../Carousel/Carousel";
 
 
@@ -23,7 +22,6 @@ export default function HobbyPaint() {
 
             <div 
             className="text_about"
-            // className={s.paint__text}
             >
                 {general.paint.title}{" "}
                 <img
@@ -37,14 +35,12 @@ export default function HobbyPaint() {
             <div 
             className={`${s.paint__title} text__title`}
             >
-                {/* <img src={animated_icons_arr.paint_img} alt="paint icon" />{" "} */}
                 {general.paint.title3} :
             </div>
 
             {/* контейнер з малюнками */}
             <div className={s.paint__teilImages}>
 
-                {/* <Album arr={paint} /> */}
                 <Carousel images={paint}/>
             </div>
         </div>
