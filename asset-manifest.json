@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.bf5b9999.css",
-    "main.js": "/static/js/main.de54f9a0.js",
+    "main.js": "/static/js/main.a897e879.js",
     "static/media/layout_img.svg": "/static/media/layout_img.d8b74d022aed725c86d0d8abfea9b87c.svg",
     "static/media/my_photo.jpg": "/static/media/my_photo.87fe0059000f7ad04f79.jpg",
     "static/media/drawing.gif": "/static/media/drawing.8b3df5a61f7c12d29d5d.gif",
@@ -45,6 +45,7 @@
     "static/media/space.jpg": "/static/media/space.b4176574f277a5b0d22a.jpg",
     "static/media/arthas (3).jpg": "/static/media/arthas (3).ef18165b9ecd1444f3f2.jpg",
     "static/media/yog_sarron.jpg": "/static/media/yog_sarron.a407b95f3d85022ccc66.jpg",
+    "static/media/todo.png": "/static/media/todo.b5ce8b8aa0d39de6cb4c.png",
     "static/media/arthas (6).jpg": "/static/media/arthas (6).aa23096f4312dc11c7a0.jpg",
     "static/media/Kleid4.jpg": "/static/media/Kleid4.a174684cfcdd12944276.jpg",
     "static/media/arthas.jpg": "/static/media/arthas.488257603ae2c901bdda.jpg",
@@ -90,10 +91,10 @@
     "index.html": "/index.html",
     "static/media/arrow-circle-down.svg": "/static/media/arrow-circle-down.8f7801d2392dfab9dcf17ed79cda9540.svg",
     "main.bf5b9999.css.map": "/static/css/main.bf5b9999.css.map",
-    "main.de54f9a0.js.map": "/static/js/main.de54f9a0.js.map"
+    "main.a897e879.js.map": "/static/js/main.a897e879.js.map"
   },
   "entrypoints": [
     "static/css/main.bf5b9999.css",
-    "static/js/main.de54f9a0.js"
+    "static/js/main.a897e879.js"
   ]
 }
