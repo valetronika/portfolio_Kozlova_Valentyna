@@ -1,3 +1,5 @@
+//2 ==========================general info===================
+ 
  blog_route: {
     id: 2,
     isShow: true,
@@ -7,10 +9,10 @@
     link_maket:
       "https://www.figma.com/file/ZKw7pJXIbltn9jLqxVLOcA/John-%2B-(Copy)?type=design&node-id=0-1&mode=design&t=NrJpiWpP3i7S7jXD-0",
     // imgs
-    layout_img: blog_route_lay,
-    website_from_layout_img: blog_route_web,
+    layout_img: картинка макету,
+    website_from_layout_img: картинка сайту ,
     git_hub_img: git,
-    image: animated_profile,
+    image: лінк на анімовану іконку ,
     is_jumping_image: false,
 
     // stack
@@ -24,22 +26,58 @@
     ],
   },
 
- example: {
-    id: 3,
-    isShow: true,
-    // links
-    link_web: "https://valetronika.github.io/todo_red/",
-    link_git: "https://github.com/valetronika",
-    link_maket: "none",
-    // imgs
-    layout_img: example,
-    website_from_layout_img: example,
-    git_hub_img: git,
-    image: "",
-    //  якщо is_jumping_image: true  то у ProjectPage jumping img буде стрибати з інтервалом
-    // 4с і матиме клас  s.project__title_img_jumping інакше s.project__title_img
-    is_jumping_image: false,
+ 
 
-    // stack
-    stack: ["-", "--", "---"],
-  },
+  -----------------------------------
+  {
+      general_info: projects_links.example,
+      title: "---Приклад",
+      technical_specification: {
+        title: "Technical Specification",
+        title: "технічне завдання",
+        title: "Technische Spezifikation",
+
+        technical_task: ["----"],
+        requirements: ["коментар курсивом"],
+
+
+        problems: [
+        //  {
+        //    problem_title: "~ What were the challenges :",
+        //    problem:   "",
+        //    solution_title: "How they were solved :",
+        //    solution: "",
+        //  },
+          {
+            problem_title: "Які були складнощі :",
+            problem: "---опис проблеми",
+            solution_title: "Як вони були вирішені :",
+            solution: " ---опис рішення",
+          },
+        // 	{
+        // 		"problem_title": "Welche Herausforderungen gab es:",
+        // 		"problem": "---Beschreibung des Problems",
+        // 		"solution_title": "Wie wurden sie gelöst:",
+        // 		"solution": "---Beschreibung der Lösung"
+        // 	},
+
+        ],
+      },
+      description: [
+    //   { text: "This is an example project description 1", img: example },
+        { text: "це приклад опису проэкту 1", img: example },
+    //   { text: "Dies ist ein Beispielprojektbeschreibung 1", img: example },  
+      ],
+
+
+      buttons: {
+        //result_demo: "view result",
+        //read_more: "more information",
+        result_demo: "дивитись результат",
+        read_more: "більше інформації",
+        //result_demo: "ergebnis ansehen",
+        //read_more: "mehr Informationen",
+      },
+    },
+
+   

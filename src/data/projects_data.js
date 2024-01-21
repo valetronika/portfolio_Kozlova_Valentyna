@@ -1,6 +1,8 @@
 import git from "../images/progects_prew/github.png";
 import goat from "../images/goat.png";
 import animated_profile from "../images/animated/profile.gif";
+import animated_bleistift from "../images/animated/bleistift.gif";
+
 
 // id:1
 import garten_layout_prew from "../images/progects_prew/id_1/layout_img.svg";
@@ -9,10 +11,13 @@ import example from "../images/progects_prew/id_1/example.png";
 // id:2
 import blog_route_lay from "../images/progects_prew/id_2/id_2_layout.png";
 import blog_route_web from "../images/progects_prew/id_2/id_2_web_prew.png";
+// id:3
+import todos_web from '../images/progects_prew/id_3/todo.png';
+
 
 //2 ==========================general info===================
 const projects_links = {
-  // garten
+  //===================== garten
   garten_shop: {
     id: 1,
     isShow: true,
@@ -41,7 +46,7 @@ const projects_links = {
       "gh-pages",
     ],
   },
-  // blog
+  //===================== blog
   blog_route: {
     id: 2,
     isShow: true,
@@ -67,7 +72,28 @@ const projects_links = {
       "Hamburger React",
     ],
   },
+  //===================== todos
 
+  todos: {
+    id: 3,
+    isShow: true,
+    // links
+    link_web: "https://valetronika.github.io/todo_red/",
+    link_git: "https://github.com/valetronika/todo_red",
+    link_maket: "none",
+    // imgs
+    layout_img: example,
+    website_from_layout_img: todos_web,
+    git_hub_img: git,
+    image: animated_bleistift,
+    //  якщо is_jumping_image: true  то у ProjectPage jumping img буде стрибати з інтервалом
+    // 4с і матиме клас  s.project__title_img_jumping інакше s.project__title_img
+    
+    is_jumping_image: false,
+
+    // stack
+    stack: [ "Javascript","SASS","React", "Redux/toolkit",],
+  },
   // ----------------DONT CHANGE general:
   example: {
     id: Infinity,
@@ -171,7 +197,44 @@ export const projects_data = {
         read_more: "more information",
       },
     },
+//=== todos
+    
+{
+  general_info: projects_links.todos,
+  title: "TODOS",
+  technical_specification: {
+    title: "Technical Specification",
+    technical_task: [
+      "Using Redux/Toolkit",
+      "Using LocalStorage to store tasks in the browser",
+    ],
+    requirements: [
+      
+      "Practicing React, Redux/Toolkit",
+    ],
+    // problems: [
+    //     {
+    //         problem_title: "Які були складнощі :",
+    //         problem: "---опис проблеми",
+    //         solution_title: "Як вони були вирішені :",
+    //         solution: " ---опис рішення",
+    //     },
+    //     // { problem_title: "", problem: "", solution: "" },
+    // ],
+  },
+  // description: ['це приклад опису проэкту 1',' це приклад опису проэкту 2'],
+  // description: [
+    // { text: "це приклад опису проэкту 1", 
+    // img: example 
+  // },
+  //   { text: " це приклад опису проэкту 2", img: example },
+  // ],
 
+  buttons: {
+    result_demo: "view result",
+        read_more: "more information",
+  },
+},
     // ----------------DONT CHANGE en :
     {
       general_info: projects_links.example,
@@ -210,7 +273,7 @@ export const projects_data = {
     },
   ],
   de: [
-    // garten de
+    //=== garten de
     {
       general_info: projects_links.garten_shop,
 
@@ -253,7 +316,7 @@ export const projects_data = {
         read_more: "mehr Informationen",
       },
     },
-    // blog de
+    //=== blog de
     {
       general_info: projects_links.blog_route,
       title: "BLOG",
@@ -281,6 +344,44 @@ export const projects_data = {
       //   { text: "Dies ist ein Beispielprojektbeschreibung 1", img: example },
       //   { text: "Dies ist ein Beispielprojektbeschreibung 2", img: example },
       // ],
+      buttons: {
+        result_demo: "ergebnis ansehen",
+        read_more: "mehr Informationen",
+      },
+    },
+    //=== todos
+    
+    {
+      general_info: projects_links.todos,
+      title: "TODOS",
+      technical_specification: {
+        title: "Technische Spezifikation",
+        technical_task: [
+          "Verwendung von Redux/Toolkit",
+          "Verwendung von LocalStorage zur Speicherung von Aufgaben im Browser",
+        ],
+        requirements: [
+          
+          "Praxis mit React, Redux/Toolkit",
+        ],
+        // problems: [
+        //     {
+        //         problem_title: "Які були складнощі :",
+        //         problem: "---опис проблеми",
+        //         solution_title: "Як вони були вирішені :",
+        //         solution: " ---опис рішення",
+        //     },
+        //     // { problem_title: "", problem: "", solution: "" },
+        // ],
+      },
+      // description: ['це приклад опису проэкту 1',' це приклад опису проэкту 2'],
+      // description: [
+        // { text: "це приклад опису проэкту 1", 
+        // img: example 
+      // },
+      //   { text: " це приклад опису проэкту 2", img: example },
+      // ],
+
       buttons: {
         result_demo: "ergebnis ansehen",
         read_more: "mehr Informationen",
@@ -319,7 +420,7 @@ export const projects_data = {
     },
   ],
   ukr: [
-    // garten ukr
+    //=============== garten ukr
     {
       general_info: projects_links.garten_shop,
       title: "магазин садових товарів",
@@ -358,7 +459,7 @@ export const projects_data = {
         read_more: "більше інформації",
       },
     },
-    // blog ukr
+    //================ blog ukr
     {
       general_info: projects_links.blog_route,
       title: "BLOG",
@@ -393,7 +494,43 @@ export const projects_data = {
         read_more: "більше інформації",
       },
     },
+    //================ todos ukr
+    {
+      general_info: projects_links.todos,
+      title: "TODOS",
+      technical_specification: {
+        title: "Технічне завдання",
+        technical_task: [
+          "використання Redux/toolkit",
+          "використання LocalStorage для зберігання tasks у браузері",
+        ],
+        requirements: [
+          
+          " практика React, Redux/toolkit",
+        ],
+        // problems: [
+        //     {
+        //         problem_title: "Які були складнощі :",
+        //         problem: "---опис проблеми",
+        //         solution_title: "Як вони були вирішені :",
+        //         solution: " ---опис рішення",
+        //     },
+        //     // { problem_title: "", problem: "", solution: "" },
+        // ],
+      },
+      // description: ['це приклад опису проэкту 1',' це приклад опису проэкту 2'],
+      // description: [
+        // { text: "це приклад опису проэкту 1", 
+        // img: example 
+      // },
+      //   { text: " це приклад опису проэкту 2", img: example },
+      // ],
 
+      buttons: {
+        result_demo: "дивитись результат",
+        read_more: "більше інформації",
+      },
+    },
     //------------------DONT CHANGE ukr :
     {
       general_info: projects_links.example,
