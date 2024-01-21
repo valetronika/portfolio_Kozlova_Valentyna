@@ -1,13 +1,13 @@
-import s from "./Home.module.scss";
 import React, { useEffect, useState } from "react";
-import { personal_data } from "../../data/data";
 import { useTranslation } from "react-i18next";
 import { certificates } from "../../data/certificates_data";
+import { personal_data } from "../../data/data";
+import s from "./Home.module.scss";
 
-import main_photo from "../../images/ich.jpg";
 import Button from "../../components/Button/Button";
-import download_img from "../../images/arrow-circle-down.svg";
 import useLocalStorage from "../../hooks/use-localstorage";
+import download_img from "../../images/arrow-circle-down.svg";
+import main_photo from "../../images/ich.jpg";
 export default function Home() {
   //= для перекладача
 
@@ -39,8 +39,8 @@ export default function Home() {
   const skills = personal_data[lang].skills.join(", ");
 
   // == СЕРТИФІКАТИ
-  const dtz_1 = certificates[lang].dtz_zertif1;
-  const dtz_2 = certificates[lang].dtz_zertif2;
+  // const dtz_1 = certificates[lang].dtz_zertif1;
+  // const dtz_2 = certificates[lang].dtz_zertif2;
   const empfehlung1 = certificates[lang].Empfehlungsschreiben1;
   const empfehlung2 = certificates[lang].Empfehlungsschreiben2;
   const certifikate = certificates[lang].certificate_img_entw;

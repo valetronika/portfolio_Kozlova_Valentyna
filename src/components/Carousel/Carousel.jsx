@@ -110,7 +110,7 @@ const Carousel = ({ images }) => {
                 </button>
                 <img
                     src={selectedImage}
-                    alt="Selected Image"
+                    alt="Selected_Image"
                     className={s.main_image}
                     onClick={(e) => handleClickOpenModal(e)}
                 />

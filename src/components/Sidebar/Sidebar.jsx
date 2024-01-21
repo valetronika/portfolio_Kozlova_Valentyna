@@ -27,6 +27,8 @@ export default function Sidebar() {
                         onMouseEnter={() => onMouseEnter(media.name)}
                         onMouseLeave={() => onMouseLeave(media.name)}
                         target="_blank"
+                        rel="noopener noreferrer"
+                        
                     >
                         <img
                             alt={media.name}

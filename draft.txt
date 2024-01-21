@@ -1,0 +1,45 @@
+ blog_route: {
+    id: 2,
+    isShow: true,
+    // links
+    link_web: "https://valetronika.github.io/BLOG_ROUTE",
+    link_git: "https://github.com/valetronika/BLOG_ROUTE",
+    link_maket:
+      "https://www.figma.com/file/ZKw7pJXIbltn9jLqxVLOcA/John-%2B-(Copy)?type=design&node-id=0-1&mode=design&t=NrJpiWpP3i7S7jXD-0",
+    // imgs
+    layout_img: blog_route_lay,
+    website_from_layout_img: blog_route_web,
+    git_hub_img: git,
+    image: animated_profile,
+    is_jumping_image: false,
+
+    // stack
+    stack: [
+      "HTML",
+      "SCSS (Sass)",
+      "JavaScript ",
+      "React",
+      "React Router DOM",
+      "Hamburger React",
+    ],
+  },
+
+ example: {
+    id: 3,
+    isShow: true,
+    // links
+    link_web: "https://valetronika.github.io/todo_red/",
+    link_git: "https://github.com/valetronika",
+    link_maket: "none",
+    // imgs
+    layout_img: example,
+    website_from_layout_img: example,
+    git_hub_img: git,
+    image: "",
+    //  якщо is_jumping_image: true  то у ProjectPage jumping img буде стрибати з інтервалом
+    // 4с і матиме клас  s.project__title_img_jumping інакше s.project__title_img
+    is_jumping_image: false,
+
+    // stack
+    stack: ["-", "--", "---"],
+  },

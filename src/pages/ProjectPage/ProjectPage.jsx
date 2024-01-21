@@ -11,13 +11,14 @@ export default function ProjectPage() {
   const lang = i18n.language;
 
   const data = projects_data[lang];
-  const project = data.find((project) => project?.general_info.id == id);
-
+  // const project = data?.find((project) => project?.general_info.id == id);
+  const project = data?.find((project) => project?.general_info.id == id) ||projects_data["en"].find((project) => project?.general_info.id == id) ;
+  // console.log(project.general_info.link_maket);
   // animation
   const [isJumping, setIsJumping] = useState(true);
   // проверка
   const [isMounted, setIsMounted] = useState(true);
-  const typeIsJumping = project.general_info.is_jumping_image;
+  const typeIsJumping = project?.general_info.is_jumping_image;
   useEffect(() => {
     setIsMounted(true);
     if (typeIsJumping) {
@@ -71,7 +72,7 @@ const navigate = useNavigate();
                 ? s.project__title_img_jumping
                 : s.project__title_img
             }
-            src={project.general_info.image}
+            src={project?.general_info.image}
             alt="projecct icon"
           />
         </div>
@@ -111,7 +112,7 @@ const navigate = useNavigate();
         ? project.technical_specification?.problems?.map((el) => (
             <div
               className={s.problem}
-              key={el.problem_title + project.general_info.id}
+              key={el.problem_title + project?.general_info.id}
             >
               {/* {console.log(el.problem_title + project.general_info.id)} */}
               <div className={s.problem__problem}>
@@ -145,9 +146,10 @@ const navigate = useNavigate();
         : ""}
 
       <div className={s.project__links}>
-        <a
+        {/* перевіряю чи є у базі  link_maket: якщо "none" то нічого не рендериться */}
+       {project?.general_info.link_maket !== 'none' &&  <a
           className={s.project__links_cont}
-          href={project.general_info.link_maket}
+          href={project?.general_info.link_maket}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -157,8 +159,10 @@ const navigate = useNavigate();
             src={project.general_info.layout_img}
             alt="maket"
           />
-        </a>
-        <a
+        </a>}
+        {/* перевіряю чи є у базі  link_web: якщо "none" то нічого не рендериться */}
+
+        {project?.general_info.link_web !== "none" && <a
           className={s.project__links_cont}
           href={project.general_info.link_web}
           target="_blank"
@@ -171,7 +175,7 @@ const navigate = useNavigate();
             src={project.general_info.website_from_layout_img}
             alt="maket"
           />
-        </a>
+        </a>}
         <a
           className={s.project__links_cont}
           href={project.general_info.link_git}

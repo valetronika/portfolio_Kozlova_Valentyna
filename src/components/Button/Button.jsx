@@ -5,7 +5,7 @@ export default function Button({ name, func, className, download,imgClassName,im
   return (
     <div>
       {className === "view__result" && (
-        <a href={func} target="_blank" className={s[className]}>
+        <a href={func} target="_blank" className={s[className]} rel="noopener noreferrer">
           {name}
         </a>
       )}
@@ -13,7 +13,7 @@ export default function Button({ name, func, className, download,imgClassName,im
         <button className={s[className]}>{name}</button>
       )}
       {className === "download_cv" && (
-        <a download={download} href={func} className={s[className]}>
+        <a download={download} href={func} className={s[className]} rel="noopener noreferrer">
           {name}
         {imgClassName&& <img className={imgClassName} src={imgSrc}/>}
         </a>
