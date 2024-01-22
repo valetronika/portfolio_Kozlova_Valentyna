@@ -32,7 +32,7 @@ export default function HobbyGames() {
             <div className={s.hobbys__play}>
                 {/* Fallout 4 */}
                 <div className={s.hobbys__play_container1}>
-                    <h2 className={s.hobbys__play_text}>Fallout 4</h2>
+                    <h2 className={s.hobbys__play_text}>Fallout 76</h2>
                     <img
                         src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExbXE1ZHlzc2xoZnk4a2g4cXZuMHR6aG9ydzgxbGdhMmNpem5sNGZvMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/humKLWskpBIScoGZgt/giphy.gif"
                         alt=""
