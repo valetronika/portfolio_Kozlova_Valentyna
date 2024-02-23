@@ -142,7 +142,7 @@ export const personal_data = {
 
     de: {
         name: "Valentyna Kozlova",
-        position: "Frontend Entwickler",
+        position: "Frontend Entwicklerin",
         education: "Master in Management",
         skills: general_info.skills,
 
@@ -177,7 +177,7 @@ export const personal_data = {
         translation: {
             home: "STARTSEITE",
             about: "ÜBER MICH",
-            works: "MEIN PROJECTS",
+            works: "MEINE PROJEKTE",
             contacts: "KONTAKTE",
         },
         country: "Ukraine",
