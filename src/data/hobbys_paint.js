@@ -2,7 +2,7 @@ import girl from "../images/hobby/paint/girl.jpg";
 import girl1 from "../images/hobby/paint/girl1.jpg";
 import girl2 from "../images/hobby/paint/girl2.png";
 import schark from "../images/hobby/paint/schark.jpg";
-import ship2 from "../images/hobby/paint/ship (2).jpg";
+import ship2 from "../images/hobby/paint/ship2.jpg";
 import ship from "../images/hobby/paint/ship.jpg";
 import space from "../images/hobby/paint/space.jpg";
 import tirp from "../images/hobby/paint/tirp.png";

@@ -23,7 +23,7 @@ export default function Contacts() {
   const handleCopySuccess = () => {
     setIsCopied(true);
 
-    // скидання статуса після декілька секунд
+    // resetting the status after a few seconds
     setTimeout(() => {
       setIsCopied(false);
     }, 1000);

@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import s from "./ProjectItem.module.scss";
 import Button from "../Button/Button";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function ProjectItem({ element, className }) {
   const [isHovered, setIsHovered] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
     
-    //2 Функція, яка буде викликатись при зміні розміру екрану
+    // 2 Функція, яка буде викликатись при зміні розміру екрану
     function handleResize() {
       setIsMobile(window.innerWidth <= 1025);
     }
@@ -80,9 +80,9 @@ export default function ProjectItem({ element, className }) {
                 func={web_prew}
               />
             )}
-            <Link to={`/demo/${element.general_info.id}`}>
-              <Button name={element.buttons.read_more} className="read__more" />
-            </Link>
+            {/* <Link to={`/demo/${element.general_info.id}`}> */}
+              <Button name={element.buttons.read_more} className="read__more" func={`/demo/${element.general_info.id}`} />
+            {/* </Link> */}
           </div>
         )}
       </div>

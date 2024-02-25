@@ -27,7 +27,7 @@ export default function Modalmage({ images, ind }) {
                 </button>
                 <img
                     src={selectedImage}
-                    alt="Selected Image"
+                    alt="Selected"
                     className={s.modal__image}
                 />
                 <button

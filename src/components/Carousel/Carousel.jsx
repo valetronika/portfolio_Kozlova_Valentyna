@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import s from "./Carousel.module.scss";
 import Modalmage from "../Modalmage/Modalmage";
+import PropTypes from 'prop-types'
+
 
 const Carousel = ({ images }) => {
     const [isShowModal, setIsShowModal] = useState(false);
@@ -126,3 +128,8 @@ const Carousel = ({ images }) => {
 };
 
 export default Carousel;
+
+
+Carousel.propTypes = {
+    images: PropTypes.array
+  }

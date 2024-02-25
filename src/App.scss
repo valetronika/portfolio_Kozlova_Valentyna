@@ -9,6 +9,9 @@ $mainColor: #f5eddc;
 
     background-color: $mainBackgroundColor;
 
+    text-decoration: none ;
+
+
     &::-webkit-scrollbar {
         width: 14px;
     }
@@ -18,12 +21,15 @@ $mainColor: #f5eddc;
     }
 }
 // це повторювальнi класи для тексту у компонентах в хоббi
-.text_about {
+.text_about, .text_about>p {
     // padding: 20px;
     // font-size: 1.2rem;
+    display: block;
     line-height: 2;
     background-color: transparent;
     max-width: 90%;
+    margin: 20px auto;
+   
 }
 .text__title {
     padding: 20px;
