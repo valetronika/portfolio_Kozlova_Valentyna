@@ -8,10 +8,10 @@ import HobbyTailoring from "../HobbyTailoring/HobbyTailoring";
 export default function HobbysAlbum() {
     return (
         <div className={s.hobbys}>
-            <HobbyGames />
             <HobbyPaint />
             <HobbyPolymer />
             <HobbyTailoring/>
+            <HobbyGames />
         </div>
     );
 }

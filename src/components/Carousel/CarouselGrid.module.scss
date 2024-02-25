@@ -1,0 +1,44 @@
+.carousel{
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: auto;
+    margin: 0 auto;
+    // border: 1px solid red;
+
+    &__item{
+
+        overflow: hidden;
+    }
+    &__thumbnail{
+        height: 200px;
+        width: 200px;
+
+        
+        justify-self: center;
+
+        transition: all 1s ease;
+
+        cursor: pointer;
+        filter: sepia();
+
+        &:hover{
+            scale: 1.1;
+            filter: none;
+        }
+
+        @media(max-width: 1000px){
+            height: 150px;
+            width: 150px;
+        }
+
+        @media(max-width: 700px){
+            height: 100px;
+            width: 100px;
+        }
+
+        @media(max-width: 400px){
+            height: 80px;
+            width: 80px;
+        }
+    }
+}

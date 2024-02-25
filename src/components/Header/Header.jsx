@@ -17,7 +17,7 @@ export default function Header() {
   // для перекладача
   const { t, i18n } = useTranslation();
   // const lang = i18n.language;
-  // так була помилка якщо браузер ставить сам мову
+  //  there was an error if the browser sets the language itself
   const lang =
     i18n.language == "ru" ? "en" : i18n.language;
     console.log(' header',lang)
@@ -31,7 +31,7 @@ export default function Header() {
   };
 
   if (!data) {
-    return <div>Данные не найдены для текущего языка.</div>;
+    return <div>Data not found for the current language.</div>;
   }
   // active link
   const setActiveLink = ({ isActive }) => {

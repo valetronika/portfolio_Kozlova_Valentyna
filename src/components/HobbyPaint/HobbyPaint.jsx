@@ -4,7 +4,7 @@ import s from "./HobbyPaint.module.scss";
 import { paint } from "../../data/hobbys_paint";
 import { useTranslation } from "react-i18next";
 import {icons} from '../../data/animated_icons'
-import Carousel from "../Carousel/Carousel";
+import CarouselGrid from "../Carousel/CarouselGrid";
 
 
 export default function HobbyPaint() {
@@ -18,7 +18,7 @@ export default function HobbyPaint() {
 
     return (
         <div className={s.paint}>
-            {/* контейнер з text */}
+            {/* container з text */}
 
             <div 
             className="text_about"
@@ -38,10 +38,9 @@ export default function HobbyPaint() {
                 {general.paint.title3} :
             </div>
 
-            {/* контейнер з малюнками */}
-            <div className={s.paint__teilImages}>
-
-                <Carousel images={paint}/>
+            {/* container w images */}
+            <div className={s.paint__pathImages}>
+                <CarouselGrid images={paint}/>
             </div>
         </div>
     );

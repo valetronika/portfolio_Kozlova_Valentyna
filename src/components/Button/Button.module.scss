@@ -10,7 +10,7 @@
     font-size: 18px;
     font-weight: 700;
     cursor: pointer;
-    text-decoration: none;
+    text-decoration: none ;
 
 }
 @mixin black {
@@ -101,6 +101,8 @@
 .read__more {
     @include button();
     @include black();
+    // text-decoration: none;
+
 }
 
 .download_cv {
