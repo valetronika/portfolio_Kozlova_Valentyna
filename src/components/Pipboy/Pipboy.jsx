@@ -3,6 +3,7 @@ import s from "./Pipboy.module.scss";
 import TypingAnimation from "../TypingAnimation/TypingAnimation";
 import { useTranslation } from "react-i18next";
 import { personal_data } from "../../data/data";
+import { NavLink } from "react-router-dom";
 
 export default function Pipboy() {
   const { t, i18n } = useTranslation();
@@ -33,16 +34,16 @@ export default function Pipboy() {
         <thead>
           <tr>
             <th colSpan={2} className={s.column_inactive}>
-              stat
+              <NavLink to={"/"}>stat</NavLink>
             </th>
             <th colSpan={2} className={s.column_active}>
               data
             </th>
             <th colSpan={1} className={s.column_inactive}>
-              proj
+              <NavLink to={"/works"}>proj</NavLink>
             </th>
             <th colSpan={2} className={s.column_inactive}>
-              photo
+              <a href="#section-photo" >photo</a>
             </th>
           </tr>
         </thead>

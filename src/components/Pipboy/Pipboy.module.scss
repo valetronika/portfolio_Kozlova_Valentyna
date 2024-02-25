@@ -51,6 +51,14 @@ $backgroundPip: #000000;
     }
     .column_inactive {
       border-bottom: 1px solid #00ff00;
+
+      & a{
+
+        color: #00ff00;
+        text-decoration: none;
+      }
+
+
     }
     th {
 
