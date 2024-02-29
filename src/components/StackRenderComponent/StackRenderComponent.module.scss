@@ -1,0 +1,18 @@
+.stack {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+
+    gap: 5px;
+    background-color: transparent;
+
+    &_container {
+        background-color: transparent;
+
+        border: 1px solid rgba(139, 88, 5, 0.781);
+
+        border-radius: 10px;
+        font-size: 12px;
+        padding: 3px 5px;
+    }
+}
