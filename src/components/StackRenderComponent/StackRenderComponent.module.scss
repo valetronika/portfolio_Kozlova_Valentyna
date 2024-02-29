@@ -16,3 +16,16 @@
         padding: 3px 5px;
     }
 }
+@media (max-width: 1050px) {
+    .stack {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 450px) {
+    .stack {
+        &_container {
+            font-size: 8px;
+        }
+    }
+}

@@ -5,7 +5,6 @@ import { personal_data, contacts_data } from "../../data/data";
 import CopyToClipboard from "react-copy-to-clipboard";
 // import ModalMessage from "../../components/ModalMessage/ModalMessage";
 import Phone from "../../components/Phone/Phone";
-// import FormEmail from "../../components/FormEmail/FormEmail";
 
 export default function Contacts() {
   const { t, i18n } = useTranslation();
@@ -47,8 +46,11 @@ export default function Contacts() {
               <ModalMessage text="Copied !" onClose={() => setIsCopied(false)} />
             )} */}
         {/* </div> */}
+
       </CopyToClipboard>
       <Phone />
+
+
     </div>
   );
 }
