@@ -11,12 +11,11 @@ export default function ProjectPage() {
   const lang = i18n.language;
 
   const data = projects_data[lang];
-  // const project = data?.find((project) => project?.general_info.id == id);
+  // спочатку було так const project = data?.find((project) => project?.general_info.id == id);
   const project = data?.find((project) => project?.general_info.id == id) ||projects_data["en"].find((project) => project?.general_info.id == id) ;
-  // console.log(project.general_info.link_maket);
   // animation
   const [isJumping, setIsJumping] = useState(true);
-  // проверка
+  // перевірка
   const [isMounted, setIsMounted] = useState(true);
   const typeIsJumping = project?.general_info.is_jumping_image;
   useEffect(() => {
@@ -76,7 +75,7 @@ const navigate = useNavigate();
             alt="projecct icon"
           />
         </div>
-        {/*============== Haupt title */}
+        {/*============== Main title */}
         <h1 className={s.project__title_text}>{project.title}</h1>
       </div>
       {/*============= comment  */}
@@ -157,7 +156,7 @@ const navigate = useNavigate();
           <img
             className={s.project__links_img}
             src={project.general_info.layout_img}
-            alt="maket"
+            alt="layout"
           />
         </a>}
         {/* перевіряю чи є у базі  link_web: якщо "none" то нічого не рендериться */}
@@ -173,7 +172,7 @@ const navigate = useNavigate();
           <img
             className={s.project__links_img}
             src={project.general_info.website_from_layout_img}
-            alt="maket"
+            alt="layout"
           />
         </a>}
         <a
@@ -187,7 +186,7 @@ const navigate = useNavigate();
           <img
             className={s.project__links_img}
             src={project.general_info.git_hub_img}
-            alt="maket"
+            alt="layout"
           />
         </a>
       </div>

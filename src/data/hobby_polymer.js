@@ -21,6 +21,12 @@ import yog_sarron2 from "../images/hobby/polymer/yog_sarron2.jpg";
 import yog_sarron3 from "../images/hobby/polymer/yog_sarron3.jpg";
 import yog_sarron4 from "../images/hobby/polymer/yog_sarron4.jpg";
 import yog_sarron_newYear from "../images/hobby/polymer/yog_sarron_newYear.jpg";
+import horse1 from '../images/hobby/polymer/horse1.jpg';
+import horse2 from '../images/hobby/polymer/horse2.jpg';
+import horse3 from '../images/hobby/polymer/horse3.jpg';
+import horse4 from '../images/hobby/polymer/horse4.jpg';
+import horse5 from '../images/hobby/polymer/horse5.jpg';
+import horse6 from '../images/hobby/polymer/horse6.jpg';
 
 export const polymer_data = [
     galli1,
@@ -46,6 +52,12 @@ export const polymer_data = [
     yog_sarron3,
     yog_sarron4,
     yog_sarron_newYear,
+    horse1,
+    horse2,
+    horse3,
+    horse4,
+    horse5,
+    horse6,
 ];
 
 
