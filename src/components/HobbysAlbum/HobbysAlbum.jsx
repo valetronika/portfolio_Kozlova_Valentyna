@@ -7,7 +7,7 @@ import HobbyTailoring from "../HobbyTailoring/HobbyTailoring";
 
 export default function HobbysAlbum() {
     return (
-        <div className={s.hobbys}>
+        <div className={s.hobbys} id="section-photo">
             <HobbyPaint />
             <HobbyPolymer />
             <HobbyTailoring/>

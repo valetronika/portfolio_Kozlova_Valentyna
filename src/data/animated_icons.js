@@ -4,6 +4,7 @@ import sad_cat from "../images/sad_cat.png";
 import arrow from "../images/right-arrow.png";
 import cat from "../images/animated/cat.gif";
 import wach from "../images/animated/wach.gif";
+import bee from "../images/animated/bee.gif";
 
 
 export const icons ={
@@ -12,6 +13,7 @@ sad_cat,
 paint_img,
 arrow,
 cat,
-wach
+wach,
+// bee
 
 }

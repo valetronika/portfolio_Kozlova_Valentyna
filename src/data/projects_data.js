@@ -12,7 +12,10 @@ import blog_route_lay from "../images/progects_prew/id_2/id_2_layout.png";
 import blog_route_web from "../images/progects_prew/id_2/id_2_web_prew.png";
 // id:3
 import todos_web from "../images/progects_prew/id_3/todo.png";
-
+//id:4
+import bee from "../images/animated/bee.gif";
+import morher_layout from "../images/progects_prew/id_4/layout.jpg";
+import morher_web from "../images/progects_prew/id_4/web.jpg";
 //2 ==========================general info===================
 const projects_links = {
     //===================== garten
@@ -70,7 +73,7 @@ const projects_links = {
             "Hamburger React",
         ],
     },
-    //===================== todos
+    //===================== here "todo"
 
     todos: {
         id: 3,
@@ -92,7 +95,28 @@ const projects_links = {
         // stack
         stack: ["Javascript", "SASS", "React", "Redux/toolkit"],
     },
-    // ----------------DONT CHANGE general:
+    //===================== mother_earth
+
+    mother_earth: {
+        id: 4,
+        isShow: true,
+        // links
+        link_web: "https://valetronika.github.io/Mother-Earth/",
+        link_git: "https://github.com/valetronika/Mother-Earth",
+        link_maket:
+            "https://www.figma.com/file/z0skYXZw5VsHjsvPZ8BVsV/MaxGraph-Youtube-marathon-1.0-(Copy)?type=design&node-id=0-2&mode=design&t=bb0v8msW6hRVgq0I-0",
+        // imgs
+        layout_img: morher_layout,
+        website_from_layout_img: morher_web,
+        git_hub_img: git,
+        image: bee,
+        is_jumping_image: true,
+
+        // stack
+        stack: ["HTML", "JavaScript ", "CSS"],
+    },
+
+    // ----------------DON`T CHANGE general:
     example: {
         id: Infinity,
         isShow: false,
@@ -195,7 +219,7 @@ export const projects_data = {
                 read_more: "more information",
             },
         },
-        //=== todos en
+        //=== todo en
         {
             general_info: projects_links.todos,
             title: "TODOS",
@@ -229,6 +253,49 @@ export const projects_data = {
                 read_more: "more information",
             },
         },
+        //=== mother_earth en
+        {
+            general_info: projects_links.mother_earth,
+            // -------
+            title: "mother earth",
+            technical_specification: {
+                title: "technical specification",
+                technical_task: ["Matching with the layout","Using pure JavaScript and CSS","Adaptive or responsive design"],
+                requirements: ["Pure JavaScript"],
+                problems: [
+                    {
+                        problem_title: "What were the challenges :",
+                        problem: "Lack of a layout for the mobile version",
+                        // solution_title: "How they were solved :",
+                        solution: "In general, the absence of a layout takes quite a bit of time, and it would be nice to spend this time solving tasks in JavaScript or CSS, but what can you do, sometimes you have to create something from yourself :-)",
+                    },
+                    // {
+                    //     problem_title: "What were the challenges :",
+                    //     problem: "",
+                    //     solution_title: "How they were solved :",
+                    //     solution: "",
+                    // },
+                ],
+            },
+            website_from_layout_img: example,
+
+            description: [
+                // {
+                //     text: "This is an example project description 1",
+                //     img: example,
+                // },
+                // {
+                //     text: "This is an example project description 2",
+                //     img: example,
+                // },
+            ],
+
+            buttons: {
+                result_demo: "result demo",
+                read_more: " read more",
+            },
+        },
+
         // ----------------DONT CHANGE en :
         {
             general_info: projects_links.example,
@@ -350,7 +417,7 @@ export const projects_data = {
                 read_more: "mehr Informationen",
             },
         },
-        //=== todos
+        //=== todos de
 
         {
             general_info: projects_links.todos,
@@ -379,6 +446,43 @@ export const projects_data = {
             // },
             //   { text: " це приклад опису проэкту 2", img: example },
             // ],
+
+            buttons: {
+                result_demo: "ergebnis ansehen",
+                read_more: "mehr Informationen",
+            },
+        },
+        //=== mother_earth de
+        {
+            general_info: projects_links.mother_earth,
+
+            title: "mother earth",
+            technical_specification: {
+                title: "technische Spezifikation",
+                technical_task: ["Verwendung von reinem JavaScript und CSS", "Adaptives oder responsives Design","Übereinstimmung mit dem Layout"],
+                requirements: ["Reines JavaScript"],
+                problems: [
+                    {
+                        problem_title: "Welche Herausforderungen gab es :",
+                        problem: "Fehlen eines Layouts für die mobile Version",
+
+                        // solution_title: "Wie sie gelöst wurden :",
+                        solution: "Allgemeinen nimmt das Fehlen eines Layouts ziemlich viel Zeit in Anspruch, und es wäre schön, diese Zeit für die Lösung von Aufgaben in JavaScript oder CSS zu verwenden, aber was soll man machen, manchmal muss man etwas aus sich selbst heraus erstellen :-)mple",
+                    },
+                    // { problem_title: "", problem: "", solution: "",solution_title: '' },
+                ],
+            },
+
+            description: [
+                // {
+                //     text: "Dies ist ein Beispielprojektbeschreibung 1",
+                //     img: example,
+                // },
+                // {
+                //     text: "Dies ist ein Beispielprojektbeschreibung 2",
+                //     img: example,
+                // },
+            ],
 
             buttons: {
                 result_demo: "ergebnis ansehen",
@@ -528,6 +632,34 @@ export const projects_data = {
             // },
             //   { text: " це приклад опису проэкту 2", img: example },
             // ],
+
+            buttons: {
+                result_demo: "дивитись результат",
+                read_more: "більше інформації",
+            },
+        },
+        //=== mother_earth ukr
+{
+            general_info: projects_links.mother_earth,
+            title: "mother earth",
+            technical_specification: {
+                title: "технічне завдання",
+                technical_task: ["співпадіння з макетом", "використовувати чистий javascript та css","адаптавний чи респонсивний дизайн"],
+                requirements: ["чистий JS"],
+                problems: [
+                    {
+                        problem_title: "Які були складнощі :",
+                        problem: "відсутність макету мобільної версії",
+                        // solution_title: "Як вони були вирішені :",
+                        solution: " Взагалі відсутній макет забирає досить часу, й хотілося би цей час витрачати на вирішення завдання у js або css, але що поробиш, треба іноді щось від себе верстати  :-)",
+                    },
+                    // { problem_title: "", problem: "", solution: "" },
+                ],
+            },
+            description: [
+                // { text: "це приклад опису проэкту 1", img: example },
+                // { text: " це приклад опису проэкту 2", img: example },
+            ],
 
             buttons: {
                 result_demo: "дивитись результат",

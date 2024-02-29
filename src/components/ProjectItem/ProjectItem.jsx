@@ -54,6 +54,7 @@ export default function ProjectItem({ element, className }) {
 
   return (
     <div
+      role="button"
       className={containerClassName}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}

@@ -6,12 +6,12 @@ import ProjectItem from "../../components/ProjectItem/ProjectItem";
 
 export default function Works() {
   const { t, i18n } = useTranslation();
-  // const lang = i18n.language;
+  // спочатку було так const lang = i18n.language але некоректно працювало;
   const lang =
    i18n.language === "ukr" || i18n.language === "de" || i18n.language === "en" ?  i18n.language: "en" ;
   const works = projects_data[lang];
 
-  //== при переході на сторінку перезляд з початку:
+  //== при переході на сторінку перегляд з початку:
   // useEffect(() => {
   //   window.scrollTo(0, 0);
   // }, []);
