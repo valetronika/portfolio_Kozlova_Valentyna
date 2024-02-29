@@ -1,175 +1,183 @@
 $mainColor: #f5eddc;
 
 .greeteng_message {
-  color: $mainColor;
-  font-size: 60px;
-  margin: 0 0 30px 0;
+    color: $mainColor;
+    font-size: 60px;
+    margin: 0 0 30px 0;
 }
 .container {
-  margin: 150px 0 250px 0;
-  display: flex;
-  gap: 30px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    margin: 150px 0 250px 0;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-  &__certificate {
-    width: 80%;
-    margin: 50px 0;
+    &__certificate {
+        width: 80%;
+        margin: 50px 0;
 
-    transition: all 1s ease;
-    &_small {
-      width: 30%;
+        transition: all 1s ease;
+        &_small {
+            width: 30%;
+        }
+        &_big {
+            width: 70%;
+        }
     }
-    &_big {
-      width: 70%;
-    }
-  }
 }
 .home {
-  color: $mainColor;
-
-  // height: 100%;
-  display: flex;
-  gap: 150px;
-  justify-content: right;
-  align-items: center;
-  margin: 0px 0 0px 0;
-
-  &__main_photo {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    background-position: center;
-    background-size: cover;
-    margin: 0 150px 0 0;
-  }
-
-  &_aboutme {
-    margin: 0 auto;
-    padding: 0 20px 0;
-    max-width: 900px;
-
-    font-size: 20px;
-    line-height: 2;
-
     color: $mainColor;
 
+    // height: 100%;
     display: flex;
+    gap: 150px;
+    justify-content: right;
     align-items: center;
-  }
-  &__button {
-    margin: 0 auto;
-    padding: 120px 0 150px;
-    max-width: 250px;
-  }
+    margin: 0px 0 0px 0;
+
+    &__main_photo {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover;
+        margin: 0 150px 0 0;
+    }
+
+    &_aboutme {
+        margin: 0 auto;
+        padding: 0 20px 0;
+        max-width: 900px;
+
+        font-size: 20px;
+        line-height: 2;
+
+        color: $mainColor;
+
+        display: flex;
+        align-items: center;
+    }
+    &__button {
+        margin: 0 auto;
+        padding: 120px 0 150px;
+        max-width: 250px;
+    }
 }
 
 @media (max-width: 1600px) {
-  .container {
-    margin: 100px 0 100px 0;
-  }
-  .home {
-    gap: 90px;
-
-    justify-content: right;
-    &__main_photo {
-      margin: 0 50px 0 0;
+    .container {
+        margin: 100px 0 100px 0;
     }
-  }
+    .home {
+        gap: 90px;
+
+        justify-content: right;
+        &__main_photo {
+            margin: 0 50px 0 0;
+        }
+    }
 }
 @media (max-width: 1320px) {
-  .greeteng_message {
-    text-align: center;
-    font-size: 50px;
-    margin: 0 0 30px 0;
-  }
-  .home {
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    margin: 50px 0 0 0;
-
-    &__main_photo {
-      margin: 0 0px 0 0;
+    .greeteng_message {
+        text-align: center;
+        font-size: 50px;
+        margin: 0 0 30px 0;
     }
-  }
+    .home {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 50px 0 0 0;
+
+        &__main_photo {
+            margin: 0 0px 0 0;
+        }
+    }
+}
+@media (max-width: 1100px) {
+    .container {
+        &__certificate {
+            &_big {
+                width: 100%;
+            }
+        }
+    }
 }
 @media (max-width: 800px) {
-  .greeteng_message {
-    text-align: center;
-    font-size: 2em;
-    margin: 0 0 30px 0;
-  }
-  .home {
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    margin: 30px 0 0 0;
+    .greeteng_message {
+        text-align: center;
+        font-size: 2em;
+        margin: 0 0 30px 0;
+    }
+    .home {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0 0 0;
 
-    &__main_photo {
-      margin: 0 0px 0 0;
+        &__main_photo {
+            margin: 0 0px 0 0;
+        }
+        &__button {
+            padding: 30px 0 50px;
+        }
     }
-    &__button {
-      padding: 30px 0 50px;
-    }
-  }
 }
 @media (max-width: 650px) {
-  .container {
-    margin: 80px 0 150px 0;
-    &__certificate {
-      margin: 10px 0;
+    .container {
+        margin: 80px 0 150px 0;
+        &__certificate {
+            margin: 10px 0;
+        }
     }
-  }
-  .greeteng_message {
-    text-align: center;
-    font-size: 1.5em;
-    line-height: 1;
-    margin: 0 0 10px 0;
-  }
-  .home {
-    &_aboutme {
-      font-size: 1em;
+    .greeteng_message {
+        text-align: center;
+        font-size: 1.5em;
+        line-height: 1;
+        margin: 0 0 10px 0;
     }
-    &__main_photo {
-      margin: 0 auto;
-      width: 200px;
-      height: 200px;
+    .home {
+        &_aboutme {
+            font-size: 1em;
+        }
+        &__main_photo {
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+        }
+        &__button {
+            padding: 20px 0 40px;
+        }
     }
-    &__button {
-      padding: 20px 0 40px;
-    }
-  }
 }
 @media (max-width: 510px) {
-  .container {
-    margin: 50px 0 150px 0;
-    padding: 0 0 200px 0;
-    &__certificate {
-      margin: 10px 0;
+    .container {
+        margin: 50px 0 150px 0;
+        padding: 0 0 200px 0;
+        &__certificate {
+            margin: 10px 0;
+        }
     }
-  }
-  .greeteng_message {
-    text-align: center;
-    font-size: 1.5em;
-    line-height: 1;
-    // margin: 0 0 30px 0;
-  }
-  .home {
-    &_aboutme {
-      font-size: 0.81em;
-    line-height: 1.5;
-
+    .greeteng_message {
+        text-align: center;
+        font-size: 1.5em;
+        line-height: 1;
+        // margin: 0 0 30px 0;
     }
-    &__main_photo {
-      margin: 0 auto;
-      width: 200px;
-      height: 200px;
+    .home {
+        &_aboutme {
+            font-size: 0.81em;
+            line-height: 1.5;
+        }
+        &__main_photo {
+            margin: 0 auto;
+            width: 200px;
+            height: 200px;
+        }
+        &__button {
+            margin: 0;
+            padding: 0;
+        }
     }
-    &__button {
-      margin: 0;
-      padding: 0;
-    }
-  }
 }
