@@ -16,8 +16,7 @@ export default function Home() {
   const [language, setLanguage] = useLocalStorage("language", "en");
   // const lang = i18n.language;
   console.log('i18n.language',i18n.language,typeof i18n.language)
-  // const lang =
-  // i18n.language == "ru" ? "en" : i18n.language;
+
   const lang =
    i18n.language == "ukr" || i18n.language == "de" || i18n.language == "en" ?  i18n.language: "en" ;
   const data = personal_data[lang];
@@ -97,7 +96,7 @@ export default function Home() {
         )}
       </div>
 
-      {/* === ABOUT ME TEIL */}
+      {/* === ABOUT ME path */}
       <div className={s.home_aboutme}>
         {about && (
           <div>
@@ -114,7 +113,7 @@ export default function Home() {
           </div>
         )}
       </div>
-
+{/* ============== */}
       <img
         onClick={() => openCloseCertificate("certifikate")}
         className={

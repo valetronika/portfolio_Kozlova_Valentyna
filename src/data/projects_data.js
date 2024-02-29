@@ -4,7 +4,7 @@ import animated_profile from "../images/animated/profile.gif";
 import animated_bleistift from "../images/animated/bleistift.gif";
 
 // id:1
-import garten_layout_prew from "../images/progects_prew/id_1/layout_img.svg";
+import garten_layout_prew from "../images/progects_prew/id_1/layout_img.jpg";
 import garten_web_prew from "../images/progects_prew/id_1/website_from_layout_img.png";
 import example from "../images/progects_prew/id_1/example.png";
 // id:2
