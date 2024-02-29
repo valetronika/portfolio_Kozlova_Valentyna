@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import s from "./ProjectItem.module.scss";
 import Button from "../Button/Button";
 import { useNavigate } from "react-router-dom";
+import PropTypes from "prop-types";
+import StackRenderComponent from "../StackRenderComponent/StackRenderComponent";
 
 export default function ProjectItem({ element, className }) {
   const [isHovered, setIsHovered] = useState(false);
@@ -33,7 +35,7 @@ export default function ProjectItem({ element, className }) {
   };
 
   /**
-   * для зміни розміру блоку при наведенні
+   * для зміни розміру блоку при наведені
    */
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -47,14 +49,14 @@ export default function ProjectItem({ element, className }) {
   // клас для усього контейнеру
   const containerClassName = isMobile
     ? s.mobile
-    : isHovered
+    : (isHovered
     ? `${s[className]} ${s.hovered}`
-    : s[className];
+    : s[className]);
 
 
   return (
     <div
-      role="button"
+      role="dialog"
       className={containerClassName}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -69,6 +71,8 @@ export default function ProjectItem({ element, className }) {
       <div className={s.info}>
         <div className={s.title}>{element.title}</div>
 
+{/* ====================сюди вставити компоненту зі стаком */}
+        <StackRenderComponent stacks_array={element.general_info.stack} />
         {/* =============BUTTONS CONTAINER */}
         {(isHovered && !isMobile ) && (
           <div className={s.info__buttons_container}>
@@ -89,4 +93,10 @@ export default function ProjectItem({ element, className }) {
       </div>
     </div>
   );
+}
+
+
+ProjectItem.propTypes = {
+  element:PropTypes.object.isRequired,
+  className:PropTypes.string.isRequired,
 }
